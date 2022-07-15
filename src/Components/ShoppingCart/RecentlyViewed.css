@@ -1,0 +1,45 @@
+/* Mobile Devive */
+@media screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .recent-view-section {
+    display: none !important;
+  }
+  .recent-view-heading {
+    display: none !important;
+  }
+}
+
+.recent-view-heading {
+  /* UI Properties */
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-172026);
+  text-align: center;
+  font: normal normal 600 30px/60px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+}
+
+.recent-view-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recent-view-section-img {
+  width: 100%;
+  padding: 10px;
+}
+
+.rec-img {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.left-img {
+  margin-top: 133px;
+}

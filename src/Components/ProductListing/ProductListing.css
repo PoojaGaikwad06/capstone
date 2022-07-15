@@ -1,0 +1,21 @@
+.ui.grid.container {
+  width: 100%;
+  height: auto;
+  padding: 2% 10%;
+}
+
+.main-pro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.one {
+  width: 80%;
+}
+
+.spinner-img {
+  width: 30%;
+  height: 30%;
+  background-color: transparent;
+}

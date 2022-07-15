@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Playfair+Display:ital,wght@1,500&display=swap');
+
+
+    $banner-font-family: 'Mulish', sans-serif;
+    $banner-font-size: 16px;
+    $banner-font-weight: 700;
+
+.banner-heading h1{
+    color: var(--white);
+    color: #fff;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
+    font: normal normal 600 48px/60px Source Serif Pro;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    letter-spacing: 0;
+    padding: 15%;
+    text-align: center;}
+
+.banner-section{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: $banner-font-family;
+
+}
+.banner-heading{
+  
+    background-color: #333;
+    color: #ffffff;
+}
+.banner-image{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.Banner-image{
+    width: 100%;
+}
+.underline {
+    background-color: #1f39ff;
+    border: none;
+    height: 5px;
+    margin: 0 auto;
+    text-align: center;
+    width: 20%;
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .banner-image {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: absolute;
+        top: 46px;
+        left: 0px;
+    }
+    .banner-heading {
+        background-color: #333;
+        color: #ffffff;
+        position: absolute;
+        z-index: 1;
+        margin-top: 75px;
+    }
+    .banner-heading h1 {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
+        font: normal normal 600 43px/43px Source Serif Pro;
+      
+    }
+    .underline{display: none;}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+
+.banner-heading h1 {
+    color: var(--white);
+    color: #fff;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
+    font: normal normal 600 31px/34px Source Serif Pro;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    letter-spacing: 0;
+    padding: 61px 10px 10px 10px;
+    text-align: center;
+}
+}

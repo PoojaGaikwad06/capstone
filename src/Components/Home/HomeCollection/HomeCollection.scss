@@ -1,0 +1,139 @@
+@import '../../../variable.scss';
+
+//Mobile View
+
+.home-collection-section {
+    margin: 5%;
+
+    .home-collection-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .home-collection-content {
+        margin: 5%;
+
+        h1 {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: center;
+            font: normal normal 600 36px/39px Source Serif Pro;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+
+        h6 {
+            /* UI Properties */
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: center;
+            font: normal normal 600 17px/48px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+
+        p {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: center;
+            font: normal normal normal 16px/24px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+    }
+
+    .home-collection-btn {
+        margin: 3% auto;
+        display: block;
+        text-align: center;
+
+        .btn-shop {
+            background: var(--primary-brand) 0% 0% no-repeat padding-box;
+            background: #E26A2C 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 6px #39373729;
+            opacity: 1;
+            width: 220px;
+            height: 40px;
+            border: none;
+            color: #fff;
+            margin: 2%;
+        }
+
+        .btn-collection {
+            background: var(--white) 0% 0% no-repeat padding-box;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 2px solid #D4703D;
+            opacity: 1;
+            width: 221px;
+            height: 40px;
+            color: #E26A2C;
+            margin: 2%;
+
+        }
+    }
+
+    .collection-divider {
+        background: var(--primary-brand) 0% 0% no-repeat padding-box;
+        background: #E26A2C 0% 0% no-repeat padding-box;
+        height: 6px;
+        width: 30%;
+        margin: 5% auto;
+        opacity: 1;
+    }
+
+}
+
+//Desktop View
+
+@media all and (min-width: 769px) {
+    .home-collection-section {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .home-collection-img {
+            width: 100%;
+        }
+
+        .home-collection-content {
+            margin: 0px;
+            text-align: left;
+            padding: 0px 2%;
+            align-self: center;
+
+            h1 {
+                text-align: left;
+            }
+
+            h6 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+
+        .home-collection-btn {
+            margin: 0px;
+            display: block;
+            text-align: left;
+
+            .btn-shop {
+                margin: 0px;
+            }
+        }
+
+        .collection-divider {
+            height: 5px;
+            margin: 2% 0px;
+        }
+    }
+
+}

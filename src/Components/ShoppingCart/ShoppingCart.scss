@@ -1,0 +1,128 @@
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-md-width: 1280px;
+$desktop-lg-width: 1440px;
+$desktop-xl-width: 1920px;
+
+/* Mobile Devive */
+
+// @media screen and (min-device-width: $mobile-width) and (max-device-width:$tablet-width) {
+//     .shopping-cart-section {
+//         grid-template-columns: auto !important;
+//     }
+
+//     .cart-accordian-section {
+//         width: 100% !important;
+//     }
+
+// }
+
+@media only screen and (min-width: 320px) and (max-width: 1000px) {
+    .shopping-cart-section {
+
+        grid-template-columns: auto !important;
+    }
+
+    .cart-accordian-section {
+        width: 100% !important;
+    }
+
+    .recent-view-section {
+        display: none !important;
+    }
+
+    .recent-view-heading {
+        display: none !important;
+    }
+}
+
+
+
+
+
+.shopping-cart-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 2fr;
+    gap: 1em;
+}
+
+.cart-img-section {
+    border: 1px solid #ddd;
+    padding: 5px;
+    height: 130px;
+}
+
+.cartimg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+
+.handdle-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+}
+
+.edit-img,
+.save-img,
+.remove-img {
+    margin-right: 10px;
+}
+
+.quantity-cart {
+    display: flex;
+    align-items: self-start;
+}
+
+.minuscount-img-cart,
+.pluscount-img-cart {
+    margin-top: 10px;
+}
+
+.cart-content-title {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal 600 20px/25px Muli;
+    letter-spacing: 0px;
+    color: #172026;
+}
+
+.cart-img-section,
+.cart-title-content,
+.quantity-cart,
+.cart-quantity-handdle {
+    align-self: center;
+}
+
+.quantity-cart-detail-page {
+    display: flex;
+    align-self: center;
+}
+
+.count-box-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 614px;
+    left: 1136px;
+    width: 114px;
+    height: 40px;
+    background: var(--white) 0% 0% no-repeat padding-box;
+    border: 2px solid var(--gray-m1);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #91959C;
+    border-radius: 8px;
+    margin: 0px 2%;
+}
+
+.input-grp-txt {
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,140 @@
+// header{display: none;}
+// .clickme {
+//   left: 10px;
+//   position: absolute;
+//   top: 15px!important;
+// }
+// .nav__link li{
+//   border-bottom: 1px solid #ede9e9;
+//   padding: 10px;
+// }
+
+// .main-mobile-section-header{display: flex; justify-content: space-between; background-color: #fff;border: 1px solid #ddd; padding: 10px;}
+// .mobile-logo{display: block;margin: 0 auto;width: 50%;}
+// .mob-icon{display: flex;justify-content: end;}
+// .srch{margin-right: 10px;}
+// .navbar-mobile {
+//   background-color: #f4f5f5;
+//   height: 468px;
+//   top: 45px;
+//   padding: 20px;
+//   position: absolute;
+//   width: 100%;
+//   z-index: 2;
+//   left: 0px;
+// }
+// .nav__link li a {
+//   color: #1b252c;
+//   font-weight: 700;
+//   text-decoration: none;
+// }
+// .srch, .s-bag{height: 20px;}
+
+// @media screen and (min-width: 1000px) and (max-width: 1920px) {
+//   .nav__link li{
+// border-bottom: none;}
+// .header{display: block;}
+// .main-mobile-section-header{display: none;}
+// header {
+//   align-items: center;
+//   background-color: #fff;
+//   border: 1px solid #ddd;
+//   color: #1b252c;
+//   display: flex;
+//   font-family: Mulish,sans-serif;
+//   font-size: 16px;
+//   justify-content: space-between;
+//   padding: 30px 10%;
+// }
+// .logo {
+//   cursor: pointer;
+//   width: 50%;
+// }
+// .nav__link li {
+//   color: #1b252c;
+//   display: inline-block;
+//   font-weight: 700;
+//   padding: 0 20px;
+// }
+// .s-bag, .signin {
+//   height: 20px;
+//   margin-left: 15px;
+// }
+// .srch {
+//   height: 20px;
+// }
+// .search{display: flex;}
+// .signin {
+//   margin-right: 5px;
+// }
+// }
+
+@import '../../../variable.scss';
+
+$Header-Background-Color: #E26A2C;
+$Header-Text-Color: #FFFFFF;
+$Header-Font-Size: 16px;
+$Header-Font-Family: 'Mulish', sans-serif;
+$Header-Padding:5% 5%;
+
+
+// Mobile View 
+.Mobile-Header-Section{
+      background-color: $Header-Background-Color;
+      padding: $Header-Padding;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     
+      
+      .Venia-Logo-Mobile {
+        margin: 0 auto;
+        width: 30%;
+        display: block;
+      }
+        .Navbar-Mobile{
+            background-color: #f4f5f5;
+            height: 468px;
+            left: 0;
+            padding: 20px;
+            position: absolute;
+            top: 79px;
+            width: 100%;
+            z-index: 2;  
+        }
+        .nav__link li {
+          border-bottom: 1px solid #ede9e9;
+          padding: 10px;
+      }
+}
+header{display: none;}
+
+@media screen and (min-width: 769px) and (max-width: 1920px) {
+  .Mobile-Header-Section{
+    display: none;
+  }
+  header {
+    align-items: center;
+    background-color: $Header-Background-Color;
+    color: $Header-Text-Color;
+    display: flex;
+    font-family: Mulish,sans-serif;
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 20px 10%;
+   
+}
+.Venia-Logo{
+  cursor: pointer;
+  width: 50%;
+}
+.Nav__Link{
+  display: flex;
+}
+.Nav__Link li{
+  color: $Header-Text-Color;
+    font-weight: 400;
+    padding: 0 20px;
+}
+}
+

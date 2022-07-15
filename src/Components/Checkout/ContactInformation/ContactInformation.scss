@@ -1,0 +1,261 @@
+@import url('../../../variable.scss');
+
+$HeaderUnderlineColor: #e26a2c;
+$CheckoutPageColor: #172026;
+$FontFamily: 'Mulish', sans-serif;
+$FormFontLabelSize: 14px;
+$FormFontWeight: 600;
+$FormBorder: 1px solid #B5B7BC;
+$FormInputBorderRadius: 8px;
+$FormTextAlign: left;
+$FormLineHeight: 2;
+$FormBtnBorder: 1px solid #e26a2c;
+$FormBtnColor: #e26a2c;
+
+
+.main-contact-information_section {
+    font-family: $FontFamily;
+    padding: 0px 17px;
+    color: $CheckoutPageColor;
+}
+
+.contact-info-heading {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: center;
+    font: normal normal 600 36px/45px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+}
+
+.contact-information_divider {
+    /* UI Properties */
+    background: var(--primary-brand) 0% 0% no-repeat padding-box;
+    background: #E26A2C 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 30%;
+    height: 5px;
+    margin: auto;
+}
+
+.guest-title {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal 600 24px/30px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+    margin: 5%;
+}
+
+.contact-information_title {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal 600 20px/25px Muli;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+}
+
+.contact-information-para {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal normal 16px/24px Muli;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+}
+
+
+
+.contact-information {
+    line-height: $FormLineHeight;
+    font-size: 16px;
+}
+
+.contact-info_form {
+    text-align: left;
+    line-height: 2
+}
+
+input {
+    /* UI Properties */
+background: var(--white) 0% 0% no-repeat padding-box;
+border: 2px solid var(--gray-l2);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #B5B7BC;
+border-radius: 8px;
+opacity: 1;
+width: 100%;
+height: 40px;
+padding: 0 5px;
+}
+
+.select-country{
+    background: var(--white) 0% 0% no-repeat padding-box;
+border: 2px solid var(--gray-l2);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #B5B7BC;
+border-radius: 8px;
+opacity: 1;
+width: 100%;
+height: 40px;
+}
+
+.form-labels-txt {
+   /* UI Properties */
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--gray-d2);
+text-align: left;
+font: normal normal 600 13px/33px Muli;
+letter-spacing: 0px;
+color: #181C24;
+opacity: 1;
+}
+
+
+.shipping-details_form {
+    text-align: $FormTextAlign;
+    line-height: $FormLineHeight;
+}
+
+.form-btn {
+    width: 50%;
+    height: 40px;
+    color: $FormBtnColor;
+    background-color: white;
+    border: $FormBtnBorder;
+    margin-top: 25px;
+}
+
+.contact-information_list {
+    text-align: left;
+    margin-top: 20px;
+    border-top: $FormBorder;
+}
+
+.contact-information_pricing-summary-column {
+    display: none;
+}
+
+select#state-name {
+    /* UI Properties */
+background: var(--white) 0% 0% no-repeat padding-box;
+border: 2px solid var(--gray-l2);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #B5B7BC;
+border-radius: 8px;
+opacity: 1;
+width: 100%;
+height: 40px;
+}
+
+.zipcode-input-textbox {
+    margin-left: 10px;
+    width: 90%;
+    height: 26px;
+}
+
+
+//Desktop View
+
+@media all and (min-width:769px) {
+    .contact-information_header {
+        background-color: #e26a2c;
+        height: 5px;
+        margin-left: 607px;
+        margin-right: 607px;
+
+    }
+
+    .contact-information_section {
+        padding: 10px 60px;
+    }
+
+    .contact-information_grid-section {
+        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 5%;
+        gap: 1em;
+    }
+
+    .contact-information_pricing-summary-column {
+        display: block;
+    }
+
+    .contact-info_form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    select#country-name {
+        width: 47%;
+        opacity: 1;
+    }
+
+    .contact-information_state-details {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+
+    select#state-name {
+        /* UI Properties */
+background: var(--white) 0% 0% no-repeat padding-box;
+border: 2px solid var(--gray-l2);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #B5B7BC;
+border-radius: 8px;
+opacity: 1;
+width: 100%;
+height: 40px;
+    }
+
+    .zipcode-input-textbox {
+        margin-left: 10px;
+        width: 75%;
+        height: 26px;
+    }
+
+    .contact-information_guest-checkout-section{
+        border: 1px solid #ddd;
+        padding: 3%;
+    }
+    .select-country{
+        background: var(--white) 0% 0% no-repeat padding-box;
+border: 2px solid var(--gray-l2);
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #B5B7BC;
+border-radius: 8px;
+opacity: 1;
+width: 100%;
+height: 40px;
+    }
+
+    .contact-information_list{
+        text-align: left;
+    margin: 3% 0;
+    padding: 3% 3%;
+    border: 1px solid #ddd;
+    }
+
+    .main-lable{
+        margin: 0 2% 0 0;
+    }
+    .main-lable1{
+        margin: 0 0 0 2%;
+    }
+}

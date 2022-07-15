@@ -1,0 +1,76 @@
+.Mobile-Header-Section {
+  background-color: #E26A2C;
+  padding: 5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Mobile-Header-Section .Venia-Logo-Mobile {
+  margin: 0 auto;
+  width: 30%;
+  display: block;
+}
+
+.Mobile-Header-Section .Navbar-Mobile {
+  background-color: #f4f5f5;
+  height: 468px;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  top: 79px;
+  width: 100%;
+  z-index: 2;
+}
+
+.Mobile-Header-Section .nav__link li {
+  border-bottom: 1px solid #ede9e9;
+  padding: 10px;
+}
+
+header {
+  display: none;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1920px) {
+  .Mobile-Header-Section {
+    display: none;
+  }
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #E26A2C;
+    border: 1px solid #ddd;
+    color: #FFFFFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Mulish,sans-serif;
+    font-size: 16px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 20px 10%;
+  }
+  .Venia-Logo {
+    cursor: pointer;
+    width: 50%;
+  }
+  .Nav__Link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Nav__Link li {
+    color: #FFFFFF;
+    font-weight: 400;
+    padding: 0 20px;
+  }
+}

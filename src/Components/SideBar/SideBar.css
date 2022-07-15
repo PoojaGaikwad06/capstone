@@ -1,0 +1,81 @@
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.flex-container > div {
+  border: 1px solid #ddd;
+  width: 16px;
+  margin: 5px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 0px;
+  border-radius: 5px;
+  width: 58px;
+}
+
+.main-sidebar {
+  padding-right: 10%;
+}
+
+.divider {
+  margin: 5% 0px;
+  border: 2px solid #ddd;
+}
+
+.size,
+.style,
+.brand {
+  display: -ms-grid;
+  display: grid;
+  line-height: 28px;
+}
+
+input.check-box {
+  margin-right: 1em;
+}
+
+.black {
+  background-color: #172026;
+}
+
+.white {
+  background-color: #FFFFFF;
+}
+
+.lime {
+  background-color: #2D9D78;
+}
+
+.yellow {
+  background-color: #FDBA5E;
+}
+
+.blue {
+  background-color: #336dff;
+}
+
+.red {
+  background-color: #E34850;
+}
+
+.purple {
+  background-color: #6408D3;
+}
+
+.pink {
+  background-color: #F9009A;
+}
+
+.orange {
+  background-color: #EB7327;
+}
+
+.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af52ff), color-stop(16%, #7950e8), color-stop(29%, #4f5ada), color-stop(43%, #57cb76), color-stop(56%, #ebc250), color-stop(69%, #ff8810), color-stop(83%, #e32f0f), to(#bf1919)) transparent;
+  background: linear-gradient(#af52ff 0%, #7950e8 16%, #4f5ada 29%, #57cb76 43%, #ebc250 56%, #ff8810 69%, #e32f0f 83%, #bf1919 100%) transparent;
+}

@@ -1,0 +1,153 @@
+@import url('../../../variable.scss');
+
+$FontTextAlign : left;
+$FontLabels : 14px;
+$FormLineHeight: 2;
+$FormBorder: 1px solid #b5b7bc;
+$FormFontLabelSize: 14px;
+$FormBtnBorder: 1px solid #e26a2c;
+$FormBtnColor: #e26a2c;
+$PaymentColor: #b5b7bc;
+
+$HeaderUnderlineColor: #e26a2c;
+$font-color: 172026;
+$font-family: 'Mulish', sans-serif;
+$FormFontLabelSize: 14px;
+$FormFontWeight: 600;
+$FormBorder: 1px solid #B5B7BC;
+$FormInputBorderRadius: 8px;
+$formtextalign: left;
+$form-line-height: 2;
+$FormBtnBorder: 1px solid #e26a2c;
+$FormBtnColor: #e26a2c;
+
+.checkout-header{
+    text-align: center;
+}
+
+.payment-information_section{
+    padding: 0px 17px;
+    color: $font-color;
+    font-family: $font-family;
+    text-align: $formtextalign;
+    line-height: $form-line-height;
+}
+
+.payment-selection-row{
+    display: flex;
+    flex-direction: row;
+}
+
+input#credit-payment {
+    width: 16px;
+    height: 20px;
+}
+.payment-info-Labels{
+    font-size: $FontLabels;
+    margin-left: 5px;
+    text-align: justify;
+    margin-top: 0px;
+}
+
+.form-labels{
+    font-size: $FormFontLabelSize;
+    font-weight: $FormFontWeight;
+}
+
+.card-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cvv-input-textbox{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.cvv-label{
+    margin-right: 32px;
+}
+.billing-address{
+    margin-top: 10px;
+}
+
+input#billing-address{
+    width: 16px;
+    height: 25px;
+}
+
+.payment-info_paypal{
+    display: flex;
+    margin-top: 20px;
+}
+.checkout-shipping_payment-method{
+    text-align: left;
+    margin-top: 20px;
+    border-top: $FormBorder;
+}
+
+.form-btn{
+    width: 50%;
+    height: 32px;
+    color: $FormBtnColor;
+    background-color: white;
+    border: $FormBtnBorder;
+    margin-top: 25px;
+}
+.continue-btn{
+    text-align: center;
+}
+.guest-checkout_details{
+    border: $FormBorder;
+    padding: 10px 10px;
+    font-size: $FormFontLabelSize;
+}
+.payment-shipping_contact-details{
+    line-height: 2;
+}
+.shipping-method{
+    margin-top: 1em;
+}
+
+
+@media all and (min-width:769px)  {
+    #shipping-reusable-coponent{
+        margin: 0px !important;
+    }
+    .payment-information_section {
+        color: 172026;
+        font-family: "Mulish", sans-serif;
+        text-align: left;
+        line-height: 2;
+    }
+    .contact-information_header {
+        background-color: #e26a2c;
+        height: 5px;
+        margin-left: 607px;
+        margin-right: 607px;
+    
+    }
+    .payment-info_grid-section{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 5%;
+        grid-gap:1em;
+    }
+    .payment-shipping_contact-details{
+        line-height: 2;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .shipping-method{
+        margin-top: 1em;
+    }
+  
+    .card-details {
+        display: flex;
+        justify-content: space-between;
+        width: 48%;
+    }
+    .continue-btn{
+        text-align: left;
+    }
+}

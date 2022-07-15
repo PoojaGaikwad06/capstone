@@ -1,0 +1,40 @@
+.grid-container {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 1em;
+}
+.grid-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.image {
+  height: 150px;
+  padding: 10px;
+  width: 100%;
+}
+.pro-img {
+  height: 100%;
+  width: 100%;
+}
+.content {
+  margin-top: 14px;
+  padding: 5px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1920px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    gap: 1em;
+  }
+  .image {
+    height: 300px;
+    padding: 10px;
+    width: 100%;
+}
+.pro-img {
+  height: 100%;
+  width: 100%;
+}
+}

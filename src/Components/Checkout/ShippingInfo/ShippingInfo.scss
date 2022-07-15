@@ -1,0 +1,28 @@
+@import url('../../../variable.scss');
+
+
+.shipping-method-section {
+    /* UI Properties */
+    border: 1px solid #D1D3D6;
+    border-radius: 2px;
+    opacity: 1;
+    padding: 3%;
+
+    .shipping-method-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 0;
+
+        h1 {
+            /* UI Properties */
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: left;
+            font: normal normal 600 16px/20px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.flex-container>div {
+  border: 1px solid #ddd;
+  width: 16px;
+  margin: 5px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 0px;
+  border-radius: 5px;
+  width: 58px;
+}
+
+.main-sidebar {
+  padding-right: 10%;
+}
+
+.divider {
+  margin: 5% 0px;
+  border: 2px solid #ddd;
+}
+
+.size,
+.style,
+.brand {
+  display: grid;
+  line-height: 28px;
+}
+
+input.check-box {
+  margin-right: 1em;
+  height: auto;
+  width: auto;
+}
+
+.black {
+  background-color: #172026;
+}
+
+.white {
+  background-color: #FFFFFF
+}
+
+.lime {
+  background-color: #2D9D78;
+}
+
+.yellow {
+  background-color: #FDBA5E;
+}
+
+.blue {
+  background-color: #336dff;
+}
+
+.red {
+  background-color: #E34850;
+}
+
+.purple {
+  background-color: #6408D3;
+}
+
+.pink {
+  background-color: #F9009A;
+}
+
+.orange {
+  background-color: #EB7327;
+}
+
+.gradient {
+  background: linear-gradient(rgb(175, 82, 255) 0%, rgb(121, 80, 232) 16%, rgb(79, 90, 218) 29%, rgb(87, 203, 118) 43%, rgb(235, 194, 80) 56%, rgb(255, 136, 16) 69%, rgb(227, 47, 15) 83%, rgb(191, 25, 25) 100%) transparent;
+}
