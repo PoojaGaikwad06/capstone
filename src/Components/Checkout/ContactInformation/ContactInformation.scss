@@ -37,10 +37,22 @@ $FormBtnColor: #e26a2c;
     background: #E26A2C 0% 0% no-repeat padding-box;
     opacity: 1;
     width: 30%;
-    height: 5px;
+    height: 8px;
     margin: auto;
 }
 
+.contact-head-guest h1{
+    /* UI Properties */
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-172026);
+text-align: left;
+font: normal normal 600 24px/30px Source Serif Pro;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
+margin-top: 15px;
+}
 .guest-title {
     /* UI Properties */
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
@@ -258,4 +270,27 @@ height: 40px;
     .main-lable1{
         margin: 0 0 0 2%;
     }
+    .contact-head-guest{
+        grid-column: 1/-1;
+        grid-row: 1/2;
+    }
+
+    .contact-head-guest h1{
+        /* UI Properties */
+font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--unnamed-color-172026);
+text-align: left;
+font: normal normal 600 24px/30px Source Serif Pro;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
+    }
+    .header-main{
+        margin: 2% 0;
+    }
+    .contact-information_divider {
+        width: 10%;
+    }
+    
 }

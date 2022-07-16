@@ -1,5 +1,42 @@
 @import url('../../../variable.scss');
 
+.shipping-method-main-section {
+    margin: 5%;
+}
+
+.hr-divider {
+    /* UI Properties */
+    background: var(--primary-brand) 0% 0% no-repeat padding-box;
+    background: #E26A2C 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 8px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.main-head-ship-method {
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: center;
+    font: normal normal 600 36px/45px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+}
+
+.shipping-method-guest-heading {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal 600 24px/30px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+}
+
 .shipping-method-section {
     /* UI Properties */
     border: 1px solid #D1D3D6;
@@ -42,7 +79,6 @@
 }
 
 .shipping-method-section-radiobtn {
-    margin: 5%;
     padding: 3% 0;
 
     .shipping-method-radio-text {
@@ -93,45 +129,89 @@
         width: 50%;
         margin: 8% auto;
         display: block;
+        /* UI Properties */
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/16px var(--unnamed-font-family-muli);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--primary-brand);
+        text-align: center;
+        font: normal normal bold 14px/16px Muli;
+        letter-spacing: 0px;
+        color: #E26A2C;
+        text-transform: uppercase;
+        opacity: 1;
     }
-.shipping-method-txt{
-    /* UI Properties */
-font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
-letter-spacing: var(--unnamed-character-spacing-0);
-text-align: left;
-font: normal normal 600 20px/25px Muli;
-letter-spacing: 0px;
-color: #72777F;
-opacity: 1;
-padding: 5% 0;
-}
-    
+
+    .shipping-method-txt {
+        /* UI Properties */
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        text-align: left;
+        font: normal normal 600 20px/25px Muli;
+        letter-spacing: 0px;
+        color: #72777F;
+        opacity: 1;
+        padding: 5% 0;
+    }
+
 
 }
 
-@media all and (min-width:769px){
-.shipping-method-guest-heading{
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-172026);
-    text-align: left;
-    font: normal normal 600 24px/30px Source Serif Pro;
-    letter-spacing: 0px;
-    color: #172026;
-    opacity: 1;
-    margin: 2% 0;
-}
- 
-    .shipping-method-main-section{
+@media all and (min-width:769px) {
+    .main-heading-txt {
+        margin: 2% 0;
+    }
+
+    .main-head-ship-method {
+        /* UI Properties */
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: center;
+        font: normal normal 600 48px/45px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+
+    .hr-divider {
+        /* UI Properties */
+        background: var(--primary-brand) 0% 0% no-repeat padding-box;
+        background: #E26A2C 0% 0% no-repeat padding-box;
+        opacity: 1;
+        width: 10%;
+        height: 8px;
+        margin-top: 10px;
+        margin: 0 auto;
+    }
+
+
+    .shipping-method-guest-heading {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: left;
+        font: normal normal 600 24px/30px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+
+    .shipping-method-main-section {
         display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1em;
-    margin: 5%;
+        grid-template-columns: 2fr 1fr;
+        gap: 1em;
+        margin: 5%;
 
-    .shipping-method-section {
-        margin: 0;
+        .heading-s-method {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
+
+        .shipping-method-section {
+            margin: 0;
+        }
     }
-    }
+
     .shipping-method-section-radiobtn {
         margin: 0;
 
@@ -139,5 +219,5 @@ padding: 5% 0;
             margin: 5% 0;
         }
     }
-    
+
 }

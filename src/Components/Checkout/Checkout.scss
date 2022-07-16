@@ -52,7 +52,7 @@ margin: 5% auto;
 color: #fff;
 display: block;
 }
-
+.place-order-btn-desk{display: none;}
 
 //Deskto View
 @media all and (min-width:769px) {
@@ -124,5 +124,8 @@ color: #fff;
     .all-items-section{
         margin: 0% !important; 
     }
+
+    .place-order-btn-desk{display: block;}
+
 
 }

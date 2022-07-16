@@ -6,8 +6,14 @@ import ShippingInfo from "./ShippingInfo/ShippingInfo";
 import Summary from "./Summary/Summary";
 import './Checkout.scss';
 import AddProduct from './AddProduct/AddProduct';
+import { useNavigate } from "react-router-dom";
 
 const Checkout=()=>{
+
+    let navigate = useNavigate();
+    const navigateToOrder = () => {
+        navigate("/order") //navigate to cart page
+    }
     return(
         <main className="all-items-section">
             <div className="heading-main">
@@ -23,7 +29,7 @@ const Checkout=()=>{
                 <div className="left-side-items">
                     <ShippingInfo/><br/>
                     <Shipping/><br/>
-                    <Payment/>
+                    <Payment/><br/>
                     <AddProduct/>
                     <button className="place-order-btn-desk">PLACE ORDER</button>
 
@@ -31,7 +37,7 @@ const Checkout=()=>{
 
                 <div className="left-side-items">
                     <Summary/>
-                    <button className="place-order-btn">PLACE ORDER</button>
+                    <button onClick={navigateToOrder} className="place-order-btn">PLACE ORDER</button>
                 </div>
             </section>
         </main>

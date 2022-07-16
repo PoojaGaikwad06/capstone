@@ -10,13 +10,15 @@ const ContactInformation = () => {
     }
     return (
         <section className="main-contact-information_section">
-            <div>
+            <div className="header-main">
                 <h2 className="contact-info-heading">Checkout</h2>
                 <hr className="contact-information_divider" />
             </div>
-            <h1 className="guest-title">Guest Checkout</h1>
 
             <div className="contact-information_grid-section">
+                <div className="contact-head-guest">
+                    <h1>Guest Checkout</h1>
+                </div>
                 <div className="contact-information_guest-checkout-section">
                     <div className="contact-information_info">
                         
