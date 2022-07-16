@@ -9,20 +9,24 @@ import Shipping from "../Shipping/Shipping";
 import { useNavigate } from "react-router-dom";
 
 const PaymentInfo = () => {
-    let navigate= useNavigate()
-    const navigateToCheckout=()=>{
+    let navigate = useNavigate()
+    const navigateToCheckout = () => {
         navigate('/details')
     }
     return (
         <section className="payment-information_section">
-            <div className="payment-info_grid-section">
-                <div className="payment-info_grid-details">
-                <div className="left-side-txt">
-                <h1>Guest Checkout</h1>
+            <div className="first-section">
+            <h1 className="head-payment-checkout">Checkout</h1>
+            <hr className="paymrnt-page-divider"/>
             </div>
+            <div className="payment-info_grid-section">
+            <div className="left-side-txt">
+                        <h1>Guest Checkout</h1>
+            </div>
+                <div className="payment-info_grid-details">
                     <div className="shipping-reusable-coponent">
-                        <ShippingInfo/><br/>
-                        <Shipping/>
+                        <ShippingInfo /><br />
+                        <Shipping />
                     </div>
                     <div id="payment-Information">
                         <h4>3. Payment Information</h4>

@@ -11,9 +11,9 @@ const ShippingMethod = () => {
     }
     return (
         <>
+         <h1 className="shipping-method-guest-heading">Guest Checkout</h1>
         <main className="shipping-method-main-section">
             <section className="shipping-method-section-information">
-                <h1 className="shipping-method-guest-heading">Guest Checkout</h1>
                 <ShippingInfo/>
                 <div className="shipping-method-section-radiobtn">
                 <div className="shipping-method-radio-text">

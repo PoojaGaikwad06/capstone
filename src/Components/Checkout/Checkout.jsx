@@ -5,6 +5,7 @@ import Shipping from "./Shipping/Shipping";
 import ShippingInfo from "./ShippingInfo/ShippingInfo";
 import Summary from "./Summary/Summary";
 import './Checkout.scss';
+import AddProduct from './AddProduct/AddProduct';
 
 const Checkout=()=>{
     return(
@@ -23,6 +24,7 @@ const Checkout=()=>{
                     <ShippingInfo/><br/>
                     <Shipping/><br/>
                     <Payment/>
+                    <AddProduct/>
                     <button className="place-order-btn-desk">PLACE ORDER</button>
 
                 </div>
