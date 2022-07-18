@@ -110,7 +110,7 @@
 .quantity {
     display: flex;
     margin: 2% 0;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .input-grp-txt {
@@ -187,7 +187,7 @@
 }
 
 .desc-div {
-    border: 2px solid #1f39ff;
+    border: 2px solid #e26a2c ;
     margin: 3% 0;
     width: 20%;
 }
@@ -291,11 +291,10 @@
         font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-25) var(--unnamed-font-family-muli);
         font: normal normal 600 16px/25px Muli;
         font-family: Mulish, sans-serif;
-        margin: 2% 0;
     }
 
     .desc-div {
-        border: 2px solid #1f39ff;
+        border: 2px solid #e26a2c;
         margin: 3% 0;
         width: 20%;
     }

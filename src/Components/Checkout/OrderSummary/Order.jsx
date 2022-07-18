@@ -20,7 +20,7 @@ const Order=()=>{
                     </div>
                     <div className="order-summary-one">
                     <ShippingInfo/>
-                    <Shipping/>
+                    <Shipping/><br/>
                     <div className="order-add-product">
                     <AddProduct/>
                     <p className="para-order-one">You will also receive an email with the details and we will let you know when your order has shipped.</p><br/>

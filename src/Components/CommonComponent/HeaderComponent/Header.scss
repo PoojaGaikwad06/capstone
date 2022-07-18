@@ -1,70 +1,91 @@
-
 @import '../../../variable.scss';
 
 $Header-Background-Color: #E26A2C;
 $Header-Text-Color: #FFFFFF;
 $Header-Font-Size: 16px;
 $Header-Font-Family: 'Mulish', sans-serif;
-$Header-Padding:5% 5%;
+$Header-Padding: 5% 5%;
 
 
 // Mobile View 
-.Mobile-Header-Section{
-      background-color: $Header-Background-Color;
-      padding: $Header-Padding;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-     
-      
-      .Venia-Logo-Mobile {
-        margin: 0 auto;
-        width: 30%;
-        display: block;
-      }
-        .Navbar-Mobile{
-            background-color: #f4f5f5;
-            height: 100vh;
-            left: 0;
-            padding: 20px;
-            position: absolute;
-            top: 70px;
-            width: 100%;
-            z-index: 2;  
-        }
-        .nav__link li {
-          border-bottom: 1px solid #ede9e9;
-          padding: 10px;
-      }
+.Mobile-Header-Section {
+  background-color: $Header-Background-Color;
+  padding: $Header-Padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .Venia-Logo-Mobile {
+    margin: 0 auto;
+    width: 30%;
+    display: block;
+  }
+
+  .Navbar-Mobile {
+    background-color: #f4f5f5;
+    height: 100vh;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .nav__link li {
+    border-bottom: 1px solid #ede9e9;
+    padding: 10px;
+
+  }
+
 }
-header{display: none;}
+
+header {
+  display: none;
+}
+
 
 @media screen and (min-width: 769px) and (max-width: 1920px) {
-  .Mobile-Header-Section{
+  .Mobile-Header-Section {
     display: none;
   }
+
   header {
     align-items: center;
     background-color: $Header-Background-Color;
     color: $Header-Text-Color;
     display: flex;
-    font-family: Mulish,sans-serif;
+    font-family: Mulish, sans-serif;
     font-size: 16px;
     justify-content: space-between;
     padding: 20px 10%;
-   
-}
-.Venia-Logo{
-  cursor: pointer;
-  width: 50%;
-}
-.Nav__Link{
-  display: flex;
-}
-.Nav__Link li{
-  color: $Header-Text-Color;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .Venia-Logo {
+    cursor: pointer;
+    width: 50%;
+  }
+
+  .Nav__Link {
+    display: flex;
+
+  }
+
+  .Nav__Link li {
+    color: $Header-Text-Color;
     font-weight: 400;
     padding: 0 20px;
-}
-}
 
+  }
+}

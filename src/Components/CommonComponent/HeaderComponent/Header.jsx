@@ -30,8 +30,8 @@ class Header extends React.Component {
                             </li>
                             <li>Men</li>
                             <li>Women</li>
-                            <li>Smart Gear</li>
-                            <li>Accessories</li>
+                            <li>Jewellery</li>
+                            <li>Electronics</li>
                         </ul>
                     </nav>
                     <div className="Cart-Bag">
@@ -60,12 +60,12 @@ class Header extends React.Component {
                             </li>
                             <li>Men</li>
                             <li>Women</li>
-                            <li>Smart Gear</li>
-                            <li>Accessories</li>
+                            <li>Jewellery</li>
+                            <li>Electronics</li>
                         </ul>
                     </nav> : ""}
                     <div className="Mobile-Logo">
-                        <Link to={`/home`}>
+                        <Link to={`/capstone`}>
                             <img src={VeniaLogo} alt="venia-logo" className="Venia-Logo-Mobile" />
                         </Link>
                     </div>

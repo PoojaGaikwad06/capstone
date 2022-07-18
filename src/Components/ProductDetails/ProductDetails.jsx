@@ -137,16 +137,16 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <div className="about">
-                        <div className="product-about-heding">{title}</div>
+                        <div className="product-about-heding"><b>{title}</b></div><br/>
                         <div className="product-about-content">
                             <p className="product-about-sub-heading">Description</p>
                             {description}
                         </div>
                         <hr className="desc-div"></hr>
                     </div>
-                    <div className="details-main">
+                    {/* <div className="details-main">
                         <Detail />
-                    </div>
+                    </div> */}
 
                 </div> : <center><span><img src={spinner} className="spinner-img" /></span></center>
 
