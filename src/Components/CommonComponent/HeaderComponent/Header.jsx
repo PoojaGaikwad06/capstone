@@ -20,7 +20,7 @@ class Header extends React.Component {
                             <link to={`/home`}></link>
                             <li>
                                 <NavLink to={'/capstone'}>
-                                    HOME
+                                    Home
                                 </NavLink>
                             </li>
                             <li>
@@ -47,7 +47,17 @@ class Header extends React.Component {
                     </div>
                     {this.state.flag ? <nav className="Navbar-Mobile" id="menu-div">
                         <ul className="Nav__Link">
-                            <li><a href="/home">Home</a></li>
+                            {/* <li><a href="/home">Home</a></li> */}
+                            <li>
+                                <NavLink to={'/capstone'}>
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to={'/product'}>
+                                    All
+                                </NavLink>
+                            </li>
                             <li>Men</li>
                             <li>Women</li>
                             <li>Smart Gear</li>

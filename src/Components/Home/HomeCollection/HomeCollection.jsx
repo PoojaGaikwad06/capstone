@@ -1,6 +1,8 @@
 import React from "react";
 import './HomeCollection.scss';
 import collection from '../../../Assets/collection.png';
+import { NavLink } from "react-router-dom";
+
 
 const HomeCollection = () => {
     return (
@@ -13,8 +15,12 @@ const HomeCollection = () => {
                 <h6>Lorem Ipsum Dolor Tempor</h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna lorem ipsum dolor sit amet.</p>
                 <div className="home-collection-btn">
+                <NavLink to={'/product'}>
                     <button className="btn-shop">SHOP NOW</button>
+                </NavLink>
+                <NavLink to={'/product'}>
                     <button className="btn-collection">SHOP COLLECTION</button>
+                </NavLink>
                     <div className="collection-divider">
 
                     </div>

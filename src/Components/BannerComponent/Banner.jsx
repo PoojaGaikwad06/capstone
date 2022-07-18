@@ -8,7 +8,7 @@ class Banner extends React.Component{
             <section className="wrapper">
                 <div className="banner-section">
                     <div className="banner-heading">
-                        <h1>Women's Outerwear</h1>
+                        <h1>All Products</h1>
                         <hr class="underline"></hr>
                     </div>
                     <div className="banner-image">
