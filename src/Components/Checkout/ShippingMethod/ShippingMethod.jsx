@@ -44,7 +44,7 @@ const ShippingMethod = () => {
                                 </div>
                             </form>
                         </div>
-                        <button className="shipping-method-btn" onClick={navigateToPaymentInfo}>Continue</button>
+                        <button className="shipping-method-btn" onClick={navigateToPaymentInfo}>CONTINUE TO PAYMENT</button>
                         <hr />
 
                         <div className="shipping-method-txt">

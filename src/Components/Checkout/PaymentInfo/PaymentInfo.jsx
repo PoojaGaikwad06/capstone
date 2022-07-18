@@ -63,7 +63,7 @@ const PaymentInfo = () => {
                             </div>
                             <div className="checkout-shipping_payment-method"></div>
                             <div className="continue-btn">
-                                <button className="form-btn" onClick={navigateToCheckout}>CONTINUE</button>
+                                <button className="form-btn" onClick={navigateToCheckout}>CONTINUE TO REVIEW ORDER</button>
                             </div>
                         </div>
                     </div>

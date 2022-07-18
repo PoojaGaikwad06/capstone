@@ -9,13 +9,11 @@ const Sidebar = () => {
                 <hr className="divider"></hr>
             </div>
             <div className="size">
-                <p>Size</p>
-                <label><input type="checkbox" className="check-box" />X-Small</label>
-                <label><input type="checkbox" className="check-box" />Small</label>
-                <label><input type="checkbox" className="check-box" />Medium</label>
-                <label><input type="checkbox" className="check-box" />Large</label>
-                <label><input type="checkbox" className="check-box" />X-Large</label>
-                <p>see More</p>
+                <p>Categories</p>
+                <label><input type="checkbox" className="check-box" />Jewelery</label>
+                <label><input type="checkbox" className="check-box" />Electronics</label>
+                <label><input type="checkbox" className="check-box" />Electronics</label>
+                <label><input type="checkbox" className="check-box" />Women's Clothing</label>
             </div>
             <hr className="divider"></hr>
             <div className="style">
@@ -59,6 +57,7 @@ const Sidebar = () => {
 
             </div>
         </section>
+        
     );
 }
 

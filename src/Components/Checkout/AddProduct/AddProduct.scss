@@ -1,6 +1,6 @@
 @import url('../../../variable.scss');
 
-
+//Mobile View
 .add-product-section {
     /* UI Properties */
     border: 1px solid #D1D3D6;
@@ -26,4 +26,31 @@
             opacity: 1;
         }
     }
+}
+
+.add-product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+.product1-image,.product2-image{
+    height: 100px;
+    width: 100px;
+}
+
+//Desktop View
+
+@media all and (min-width: 769px){
+    .add-product-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+        align-items: center;
+    }
+    
+    .product1-image,.product2-image{
+        height: 100px;
+        width: 100px;
+    }
+   
 }

@@ -86,7 +86,7 @@ const ContactInformation = () => {
                                     </div>
                                 </div>
                             </form>
-                            <button className="form-btn" onClick={navigateToShipping}>CONTINUE</button>
+                            <button className="form-btn" onClick={navigateToShipping}>CONTINUE TO SHIPPING METHOD</button>
                         </div>
                         <div className="two-accordian-dummy">
                         <div className="contact-information_list">

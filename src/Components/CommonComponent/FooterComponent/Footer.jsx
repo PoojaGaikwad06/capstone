@@ -1,7 +1,7 @@
 
 import React from "react";
 import "./Footer.scss";
-import logo from "../../../Assets/finallogo.png"
+import finallogo1 from "../../../Assets/finallogo1.png"
 import facebook from "../../../Assets/facebook.png"
 import instagram from "../../../Assets/instagram.png"
 import twitter from "../../../Assets/twitter.png"
@@ -54,7 +54,7 @@ class Footer extends React.Component {
                     </div>
                 </div>
                 <div className="btm-footer">
-                    <img src={logo} alt="taste of fruit" className="logo-btm" />
+                    <img src={finallogo1} alt="taste of fruit" className="logo-btm" />
                     <p className="content">© Company Name Address Ave, City Name, State ZIP</p>
                     <ul className="btmtxt">
                         <li className="list"><a href="#">Terms of Use</a></li>

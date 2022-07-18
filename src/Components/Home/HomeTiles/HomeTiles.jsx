@@ -3,6 +3,7 @@ import './HomeTiles.scss' ;
 import women from '../../../Assets/women.png';
 import men from '../../../Assets/men.png';
 import jwellary from '../../../Assets/jwellary.png';
+import electronic from '../../../Assets/electronic.png';
 import { Link } from "react-router-dom";
 
 
@@ -50,7 +51,7 @@ const HomeTiles = () => {
             <div className="tile-electronics">
                 <div className="tile-electronics-img">
                 <Link to={'/product'}>
-                    <img src={women} alt="Electronics-tile" />
+                    <img src={electronic} alt="Electronics-tile" />
                 </Link>
                 </div>
                 <div className="tile-electronics-content">

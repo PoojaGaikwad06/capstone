@@ -4,7 +4,6 @@ import sliders from "../../Assets/sliders.png"
 import arrowdown from "../../Assets/arrowdown.png"
 
 
-
 const Sort = () => {
     return (
         <>

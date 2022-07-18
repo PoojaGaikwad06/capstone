@@ -35,7 +35,6 @@ const Checkout = () => {
 
                 <div className="left-side-items">
                     <Summary />
-                    {/* <NavLink to={'/order'}><button className="place-order-btn">PLACE ORDER</button> */}
                 </div>
             </section>
         </main>

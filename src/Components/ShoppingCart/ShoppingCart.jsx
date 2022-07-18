@@ -5,7 +5,7 @@ import RecentlyViewed from "./RecentlyViewed";
 import PricingSummary from "./PricingSummary";
 import "./ShoppingCart.scss";
 import edit from "../../Assets/edit.png";
-import save from "../../Assets/save.png";
+import heart1 from "../../Assets/heart1.png";
 import remove from "../../Assets/remove.png";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
@@ -70,7 +70,7 @@ const ShoppingCart = () => {
                                             </div>
                                         </div>
                                         <div className="handdle-section">
-                                            <img src={save} className="save-img" />
+                                            <img src={heart1} className="save-img" />
                                             <div className="cart-handle-name">
                                                 <p>Save for Later</p>
                                             </div>
