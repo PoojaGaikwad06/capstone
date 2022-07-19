@@ -17,11 +17,12 @@ https://fakestoreapi.com/docs
 ### `Requirements`
 
 Create below flow as per the design using React framework,\
-- Product Listing
-
-- Product Details
-
-- Cart
+- Home
+-Product Listing
+-Product Details
+-Cart
+-Checkout
+-Order Summary
 
 ### `Technology stack`
 - HTML5
@@ -91,4 +92,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - $ git push  master \
 
 ## Github Deployment Site URL
-https://poojagaikwad06.github.io/adobereactassignment/
+https://poojagaikwad06.github.io/capstone/
