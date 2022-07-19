@@ -31,10 +31,11 @@ export const addTOCart = (p) => {
     };
 };
 
-// //for delete item to cart
-// export const delProduct = (products) => {
-//     return {
-//         type: ActionTypes.DELETE_PRODUCT,
-//         playload: products,
-//     };
-// };
+//for save item to checkout
+export const addTOCheckout = (p) => {
+    return {
+        type: ActionTypes.CHECKOUT_PRODUCT,
+        playload: p,
+    };
+};
+

@@ -1,13 +1,19 @@
-import React from "react";
+import React,{useState} from "react";
 import Summary from '../../Checkout/Summary/Summary'
 import SignIn from '../../Checkout/SignIn/Signin';
 import './ContactInformation.scss';
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import { useSelector } from "react-redux/es/exports";
+
 const ContactInformation = () => {
     let navigate=useNavigate()
     const navigateToShipping=()=>{
         navigate("/shipping") //navigate to cart page
     }
+    const addCheckout = useSelector((state) => state.addCheckout);
+    const [quantity, setQuantity] = useState(1);
+
+
     return (
         <section className="main-contact-information_section">
             <div className="header-main">

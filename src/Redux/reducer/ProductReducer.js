@@ -9,8 +9,12 @@ const cartInitialState = {
     cart: []                //add to cart data 
 };
 
+const checkoutInitialState = {
+    checkout: []                //add to cart data 
+};
 
-//set the product for productlisting pag
+
+//set the product for productlisting page
 export const ProductReducer = (state = initialState, { type, playload }) => {
     switch (type) {
         case ActionTypes.SET_PRODUCTS:
@@ -21,7 +25,7 @@ export const ProductReducer = (state = initialState, { type, playload }) => {
     }
 };
 
-//selected the product for productlisting pag
+//selected the product for productlisting page
 
 export const selectedProductReducer = (state = {}, { type, playload }) => {
     switch (type) {
@@ -38,6 +42,16 @@ export const selectedProductReducer = (state = {}, { type, playload }) => {
 export const addProductReducer = (state = [], { type, playload }) => {
     switch (type) {
         case ActionTypes.ADD_TO_CART:
+
+            return [...state, ...[playload]]
+        default:
+            return state;
+    }
+};
+
+export const addCheckoutReducer = (state = [], { type, playload }) => {
+    switch (type) {
+        case ActionTypes.CHECKOUT_PRODUCT:
 
             return [...state, ...[playload]]
         default:

@@ -28,29 +28,52 @@
     }
 }
 
-.add-product-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-}
+// .add-product-content {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 1em;
+// }
 .product1-image,.product2-image{
     height: 100px;
     width: 100px;
 }
+
+.pro-1 {
+    height: 100%;
+    width: 100px;
+}
+.product-img-1 {
+    height: 100%;
+    width: 100%;
+}
+.content-details{
+    display: grid;
+        grid-template-columns:auto;
+        align-items: center;
+    }
 
 //Desktop View
 
 @media all and (min-width: 769px){
     .add-product-content{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 2fr;
         gap: 1em;
         align-items: center;
     }
-    
-    .product1-image,.product2-image{
-        height: 100px;
+    .pro-1 {
+        height: 100%;
         width: 100px;
     }
+    .product-img-1 {
+        height: 100%;
+        width: 100%;
+    }
+    .content-details{
+        display: grid;
+            grid-template-columns: 0.5fr 2fr;
+            align-items: center;
+            gap: 1em;
+        }
    
 }
