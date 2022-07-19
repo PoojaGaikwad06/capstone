@@ -1,12 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import AddProduct from "../AddProduct/AddProduct";
 import PaymentInfo from "../PaymentInfo/PaymentInfo";
 import Shipping from "../Shipping/Shipping";
 import ShippingInfo from "../ShippingInfo/ShippingInfo";
 import FollowUs from "../FollowUs/FollowUs";
 import './Order.scss';
+import { useSelector } from "react-redux/es/exports";
+
 
 const Order=()=>{
+    const addCheckout = useSelector((state) => state.addCheckout);
+    const [quantity, setQuantity] = useState(1);
     return(
         <main className="main-order-summary-section">
             <section className="main-order-summary-container">

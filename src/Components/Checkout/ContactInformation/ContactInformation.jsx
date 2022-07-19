@@ -10,8 +10,8 @@ const ContactInformation = () => {
     const navigateToShipping=()=>{
         navigate("/shipping") //navigate to cart page
     }
-    const addCheckout = useSelector((state) => state.addCheckout);
-    const [quantity, setQuantity] = useState(1);
+    // const addCheckout = useSelector((state) => state.addCheckout);
+    // const [quantity, setQuantity] = useState(1);
 
 
     return (
