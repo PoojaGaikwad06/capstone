@@ -27,9 +27,6 @@ margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.order-summary-grid-column{
-    margin: 5%;
-}
 .follow-us-section{display: none;}
 //Deskto View
 @media all and (min-width:769px) {
@@ -37,13 +34,12 @@ margin-top: 10px;
         display: grid;
         gap: 1em;
         grid-template-columns: 2fr 1fr;
-        margin: 5%;
     }
 
     .order-summary-one {
         display: grid;
         gap: 1em;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr;
     }
 
     .order-add-product {
@@ -96,5 +92,7 @@ margin-top: 10px;
 }
 .follow-us-section{display: block;}
 
-
+.main-order-summary-container{
+    padding: 0 5%;
+}
 }

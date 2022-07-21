@@ -200,8 +200,7 @@ height: 40px;
     .contact-information_grid-section {
         
         display: grid;
-        grid-template-columns: 2fr 1fr;
-        margin: 5%;
+        grid-template-columns: 2fr auto;
         gap: 1em;
     }
 
@@ -292,5 +291,52 @@ opacity: 1;
     .contact-information_divider {
         width: 10%;
     }
-    
+ 
+}
+
+.shipping-method-section {
+    /* UI Properties */
+    border: 1px solid #D1D3D6;
+    border-radius: 2px;
+    opacity: 1;
+    padding: 3%;
+
+    .shipping-method-block {
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 0;
+
+        h1 {
+            /* UI Properties */
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-20) var(--unnamed-font-family-muli);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-172026);
+            text-align: left;
+            font: normal normal 600 16px/20px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+    }
+}
+
+.placebtn{
+    height: 45px;
+    width: 250px;
+    padding: 0 5%;
+    background: #d4703d;
+    border: 2px solid #d4703d;
+    box-shadow: 0px 3px 6px rgb(57 55 55 / 16%);
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-14)/16px var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.main-contact-information_section{
+    padding: 0 5%;
 }

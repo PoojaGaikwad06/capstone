@@ -18,18 +18,18 @@ const AddProduct = () => {
                 </div>
 
                 <div key={id} className="add-product-content">
-                <div className="content-details">
-                    <div className="pro-1">
-                        <img src={image} className="product-img-1" />
-                    </div>
-                    <div>
-                        <p className="pro-des">
-                            <b>Title:-&nbsp;&nbsp;</b>{title}<br />
-                            <b>Price:-&nbsp;&nbsp;</b>${price}<br />
-                            <b>Category:-&nbsp;&nbsp;</b>{category}
+                    <div className="content-details">
+                        <div className="pro-1">
+                            <img src={image} className="product-img-1" />
+                        </div>
+                        <div>
+                            <p className="pro-des">
+                                <b>Title:-&nbsp;&nbsp;</b>{title}<br />
+                                <b>Price:-&nbsp;&nbsp;</b>${price}<br />
+                                <b>Category:-&nbsp;&nbsp;</b>{category}
 
-                        </p>
-                    </div>
+                            </p>
+                        </div>
                     </div>
 
                 </div>

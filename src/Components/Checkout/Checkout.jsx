@@ -1,5 +1,4 @@
 import React from "react";
-import Payment from "./Payment/Payment";
 import PaymentInfo from "./PaymentInfo/PaymentInfo";
 import Shipping from "./Shipping/Shipping";
 import ShippingInfo from "./ShippingInfo/ShippingInfo";
@@ -25,7 +24,6 @@ const Checkout = () => {
                 <div className="left-side-items">
                     <ShippingInfo /><br />
                     <Shipping /><br />
-                    <Payment /><br />
                     <AddProduct />
                     <NavLink to={'/order'}><button className="place-order-btn-desk">PLACE ORDER</button></NavLink>
                     <p className="place-term-condition">By clicking confirm order you agree to our<br />

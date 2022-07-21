@@ -4,7 +4,6 @@ import "./ProductDetails.scss";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { selectedProduct, removeselectedProduct, addTOCart } from "../../Redux/actions/ProductAction";
-import down from "../../Assets/down.png";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
 import Swatchone from "../../Assets/Swatchone.png";
@@ -76,7 +75,6 @@ const ProductDetails = () => {
                         <div className="img1"><img src={image} alt={title} className="small-img" /></div>
                         <div className="img1"><img src={image} alt={title} className="small-img" /></div>
                         <div className="img1"><img src={image} alt={title} className="small-img" /></div>
-                        <img src={down} alt="like" className="arrow-down" />
                     </div>
                     <div className="pdetail-img">
                         <img src={image} alt={title} className="detail-img" />
@@ -90,7 +88,7 @@ const ProductDetails = () => {
 
                         <p>{description}</p>
                         <hr className="divider"></hr>
-                        <p className="pd-heading">Color</p>
+                        {/* <p className="pd-heading">Color</p>
                         <div className="pd-color">
                             <div className="c1">
                                 <img src={Swatchone} alt={title} className="swatch-img" />
@@ -113,7 +111,7 @@ const ProductDetails = () => {
                             <div className="p-size">M</div>
                             <div className="p-size">L</div>
                             <div className="p-size">XL</div>
-                        </div>
+                        </div> */}
                         <p className="pd-heading">Quantity</p>
                         <div className="quantity">
                             <button type="button" onClick={handleDecrement} className="input-grp-txt"><img src={minus} alt={title} className="minuscount-img" /></button>
