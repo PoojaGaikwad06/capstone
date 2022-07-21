@@ -1,6 +1,6 @@
 @import url('../../../variable.scss');
 
-
+//Mobile View
 .order-heading-section h1{
     /* UI Properties */
 font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-45) var(--unnamed-font-family-source-serif-pro);
@@ -26,8 +26,10 @@ margin-top: 10px;
 .order-heading-section{
     margin-bottom: 20px;
 }
-
 .follow-us-section{display: none;}
+.order-add-product{margin: 3% 5%;}
+
+
 //Deskto View
 @media all and (min-width:769px) {
     .order-summary-grid-column {

@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Summary from '../../Checkout/Summary/Summary'
 import SignIn from '../../Checkout/SignIn/Signin';
 import './ContactInformation.scss';
-import { useNavigate } from "react-router-dom";
-// import PaymentInfo from "../PaymentInfo/PaymentInfo";
-// import ShippingInfo from "../ShippingInfo/ShippingInfo";
 import { setshippingData } from "../../../Redux/actions/ShippingInformation1";
 import { useSelector, useDispatch } from 'react-redux';
 import edit from '../../../Assets/edit.png';
@@ -14,11 +11,6 @@ import PaymentInfo from "../PaymentInfo/PaymentInfo";
 import AddProduct from "../AddProduct/AddProduct";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
-
-
-
-
 
 const ContactInformation = () => {
 
@@ -62,24 +54,24 @@ const ContactInformation = () => {
     return (
         <>
             <section className="main-contact-information_section">
-            {pathname === "/checkout" ? <div className="header-main">
+                {pathname === "/checkout" ? <div className="header-main">
                     <h2 className="contact-info-heading">Checkout</h2>
                     <hr className="contact-information_divider" />
-                </div>: ""}
+                </div> : ""}
 
                 <div className="contact-information_grid-section" id="contact-order">
-                {pathname === "/checkout" ? <div className="contact-head-guest">
+                    {pathname === "/checkout" ? <div className="contact-head-guest">
                         <h1>Guest Checkout</h1>
-                    </div>:""}
+                    </div> : ""}
                     <div className="contact-information_guest-checkout-section">
-                    {pathname === "/checkout" ?  <div className="contact-information_info">
+                        {pathname === "/checkout" ? <div className="contact-information_info">
 
                             <h2 className="contact-information_title"> Contact Information</h2>
                             <p className="contact-information-para">We’ll use these details to keep you informed on your delivery.</p>
-                        </div>: ""}
+                        </div> : ""}
                         <div className="contact-information_forms-section">
                             <div>
-                                {isEditMode && pathname=== "/checkout" ?<form name="shipping-details_form" className="shipping-details_form" action="" onSubmit={handleSubmit(onSubmit)}>
+                                {isEditMode && pathname === "/checkout" ? <form name="shipping-details_form" className="shipping-details_form" action="" onSubmit={handleSubmit(onSubmit)}>
                                     <div>
                                         <label className="form-labels-txt">Email</label><br />
                                         <input type="text" name="emailid" className="input-textbox-box" placeholder="abc@xyz.com" value={ShippingInfo_state.emailid} onChange={setShippingInfoData} />
@@ -139,18 +131,18 @@ const ContactInformation = () => {
                                     <section className="shipping-method-section">
                                         <div class="shipping-method-block">
                                             <h1>Shipping Information</h1>
-                                            {pathname === "/checkout" ? <img src={edit} className="edit-image" alt="editicon" onClick={() => onEdit()} />:""}
+                                            {pathname === "/checkout" ? <img src={edit} className="edit-image" alt="editicon" onClick={() => onEdit()} /> : ""}
                                         </div>
                                         <div className="shipping-method-content">
                                             <p>
-                                                {ShippingInfo_state.emailid}<br />{ShippingInfo_state.phonenumber}
+                                                <b>{ShippingInfo_state.emailid}<br />{ShippingInfo_state.phonenumber}</b>
                                             </p>
-                                            <br />
+
                                             <p>
                                                 {ShippingInfo_state.countryname} <br />
                                                 {ShippingInfo_state.firstname}&nbsp;&nbsp;{ShippingInfo_state.lastname}<br />
-                                                {ShippingInfo_state.streetaddress},{ShippingInfo_state.cityname}<br />
-                                                {ShippingInfo_state.statename},{ShippingInfo_state.zipcode}
+                                                {ShippingInfo_state.streetaddress}&nbsp;&nbsp;{ShippingInfo_state.cityname}<br />
+                                                {ShippingInfo_state.statename}&nbsp;&nbsp;{ShippingInfo_state.zipcode}
 
                                             </p>
                                         </div>
@@ -162,16 +154,18 @@ const ContactInformation = () => {
                                 </div>
                             </div>
                         </div>
-                        {pathname === "/checkout" ?<Link to={`/order`}>
+                        {pathname === "/checkout" ? <Link to={`/order`}>
 
                             <button className="placebtn">place order</button>
-                        </Link>:""}
+                            <p color="#333">By Clicking confirm order you agree to our <br/>Terms and Conditions
+                            </p>
+                        </Link> : ""}
                     </div>
 
-                    {pathname === "/checkout" ?<div className="contact-information_pricing-summary-column">
+                    {pathname === "/checkout" ? <div className="contact-information_pricing-summary-column">
                         <SignIn />
                         <Summary />
-                    </div>: ""}
+                    </div> : ""}
                 </div>
 
             </section>

@@ -3,6 +3,7 @@ const paymentIntialState = {
   paymentInfo: {
     holdername: "",
     countryname: "",
+    expdate:"",
   }
 };
 

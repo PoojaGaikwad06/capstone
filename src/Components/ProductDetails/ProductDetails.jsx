@@ -6,15 +6,9 @@ import { useDispatch, useSelector } from "react-redux/es/exports";
 import { selectedProduct, removeselectedProduct, addTOCart } from "../../Redux/actions/ProductAction";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
-import Swatchone from "../../Assets/Swatchone.png";
-import Swatchtwo from "../../Assets/Swatchtwo.png";
-import Swatchthree from "../../Assets/Swatchthree.png";
-import Swatchfour from "../../Assets/Swatchfour.png";
 import heart from "../../Assets/heart.png";
 import share from "../../Assets/share.png";
 import { useNavigate } from "react-router-dom";
-import sweat from "../../Assets/sweat.png";
-import Detail from "../Details/Detail";
 import spinner from "../../Assets/spinner.gif";
 
 
@@ -88,30 +82,6 @@ const ProductDetails = () => {
 
                         <p>{description}</p>
                         <hr className="divider"></hr>
-                        {/* <p className="pd-heading">Color</p>
-                        <div className="pd-color">
-                            <div className="c1">
-                                <img src={Swatchone} alt={title} className="swatch-img" />
-                            </div>
-                            <div className="c2">
-                                <img src={Swatchtwo} alt={title} className="swatch-img" />
-
-                            </div>
-                            <div className="c3">
-                                <img src={Swatchthree} alt={title} className="swatch-img" />
-                            </div>
-                            <div className="c4">
-                                <img src={Swatchfour} alt={title} className="swatch-img" />
-                            </div>
-                        </div>
-                        <p className="pd-heading">size</p>
-                        <div className="pd-size">
-                            <div className="p-size">XS</div>
-                            <div className="p-size">S</div>
-                            <div className="p-size">M</div>
-                            <div className="p-size">L</div>
-                            <div className="p-size">XL</div>
-                        </div> */}
                         <p className="pd-heading">Quantity</p>
                         <div className="quantity">
                             <button type="button" onClick={handleDecrement} className="input-grp-txt"><img src={minus} alt={title} className="minuscount-img" /></button>
@@ -142,9 +112,6 @@ const ProductDetails = () => {
                         </div>
                         <hr className="desc-div"></hr>
                     </div>
-                    {/* <div className="details-main">
-                        <Detail />
-                    </div> */}
 
                 </div> : <center><span><img src={spinner} className="spinner-img" /></span></center>
 

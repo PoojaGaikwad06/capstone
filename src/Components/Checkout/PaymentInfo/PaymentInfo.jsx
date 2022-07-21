@@ -70,7 +70,7 @@ const PaymentInfo = () => {
                                         <label className="form-labels cvv-label">CVV</label><br />
                                     </div>
                                     <div className="card-details">
-                                        <input type="date" name="country-name" className="input-textbox" /><br />
+                                        <input type="date" name="expdate" className="input-textbox" value={PaymentInfo_state.expdate} onChange={setFormdata}/><br />
                                         <input type="text" name="country-name" className="cvv-input-textbox" /><br />
                                     </div>
                                     <div className="payment-selection-row billing-address">
