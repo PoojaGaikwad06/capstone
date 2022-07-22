@@ -88,4 +88,18 @@ header {
     padding: 0 20px;
 
   }
+  .Cart-Bag::after{
+    content: attr(data-cart-value);
+    position: relative;
+    right: 5px;
+    bottom: 15px;
+    background: #fda65d;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-grid;
+    width: 1rem;
+    text-align: center;
+    font-size: 1rem;
+  }
 }

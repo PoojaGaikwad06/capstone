@@ -1,27 +1,39 @@
 
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { setpaymentInfo } from '../../../Redux/actions/paymentMethod';
-//  redux/actions/paymentMethod'; 
 import { useSelector, useDispatch } from 'react-redux';
-import ShippingInfo from "../ShippingInfo/ShippingInfo";
 import "./PaymentInfo.scss";
 import edit from '../../../Assets/edit.png';
 import { useLocation } from "react-router-dom";
+import { useForm } from 'react-hook-form';
+
 
 
 const PaymentInfo = () => {
     const { pathname } = useLocation();
 
     const [isEditMode, toggleEditMode] = useState(false);
-    const { handleSubmit } = useForm({ shouldUnregister: false });
+    // const { handleSubmit } = useForm({ shouldUnregister: false });
     const paymentInfo_Store = useSelector((state) => state.paymentInfo.paymentInfo);
     const [PaymentInfo_state, Set_PaymentInfo_state] = useState(paymentInfo_Store);
     let dispatch = useDispatch();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm({ mode: "all", defaultValues: PaymentInfo_state });
+
+
+
+
+
 
     const onSubmit = (data) => {
         toggleEditMode(!isEditMode);
-        dispatch(setpaymentInfo(PaymentInfo_state))
+        Set_PaymentInfo_state((p)=>{
+            return {...data}
+        })
+        dispatch(setpaymentInfo(data))
 
         console.log("a", data);
     }
@@ -30,20 +42,20 @@ const PaymentInfo = () => {
         toggleEditMode(!isEditMode);
     }
 
-    const setFormdata = (ev) => {
+    // const setFormdata = (ev) => {
         
-        let { value, name } = ev.target;
-        Set_PaymentInfo_state(
-            (pre) => {
-                return {
-                    ...pre,
-                    [name]: value,
-                }
+    //     let { value, name } = ev.target;
+    //     Set_PaymentInfo_state(
+    //         (pre) => {
+    //             return {
+    //                 ...pre,
+    //                 [name]: value,
+    //             }
 
 
-            }
-        )
-    }
+    //         }
+    //     )
+    // }
     return (
         <>
             {isEditMode ? <section className="payment-information_section">
@@ -62,16 +74,50 @@ const PaymentInfo = () => {
                                         <label for="credit-payment" className="payment-info-Labels">Credit</label><br></br>
                                     </div>
                                     <label className="form-labels">Name on Card</label><br />
-                                    <input type="text" name="holdername" className="input-textbox" value={PaymentInfo_state.holdername} onChange={setFormdata} /><br />
+                                    <input type="text" name="holdername" className="input-textbox" 
+                                      {...register('holdername', {
+                                        required: 'Card Number is Required',
+                                        pattern: {
+                                            value: /^[A-Za-z ]+$/,
+                                            message: 'Please Enter Card Name',
+                                        },
+                                    })}
+                                    />
+                                    <p style={{ color: "red" }}>{errors?.holdername?.message}</p>
+                                    <br />
                                     <label className="form-labels">Credit Card Number</label><br />
-                                    <input type="text" name="cno" className="input-textbox" value={PaymentInfo_state.cno} onChange={setFormdata}/><br />
+                                    <input type="text" name="cno" className="input-textbox" 
+                                       {...register('cno', {
+                                        required: 'Credit Card No is Required',
+                                        pattern: {
+                                            value: /^\d{16}$/,
+                                            message: 'Please Enter Credit Card No',
+                                        },
+                                    })}
+                                    />
+                                    <p style={{ color: "red" }}>{errors?.cno?.message}</p>
+
+                                    <br />
                                     <div className="card-details">
                                         <label className="form-labels">Expiration Date</label><br />
                                         <label className="form-labels cvv-label">CVV</label><br />
                                     </div>
                                     <div className="card-details">
-                                        <input type="date" name="expdate" className="input-textbox" value={PaymentInfo_state.expdate} onChange={setFormdata}/><br />
-                                        <input type="text" name="country-name" className="cvv-input-textbox" /><br />
+                                        <input type="date" name="expdate" className="input-textbox" 
+                                        {...register('expdate')}
+                                        /><br />
+                                        <input type="text" name="cvv" className="cvv-input-textbox" 
+                                             {...register('cvv', {
+                                                required: 'CVV No Required',
+                                                pattern: {
+                                                    value: /^\d{3}$/,
+                                                    message: 'Please Enter CVV No',
+                                                },
+                                            })}
+                                        />
+                                        <p style={{ color: "red" }}>{errors?.cvv?.message}</p>
+
+                                        <br />
                                     </div>
                                     <div className="payment-selection-row billing-address">
                                         <input type="checkbox" id="billing-address" name="billing-address" value="Bill Address" checked />
