@@ -24,7 +24,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/capstone" />} />
           <Route path='/capstone' exact element={<Home/>}/>
-          <Route path='product' exact element={<ProductListing />} />
+          <Route path='product' exact element={<ProductListing />}>
+          <Route path="category/:category" element={<ProductListing />} />   
+          </Route>
+          
           <Route path='/product/:productID' element={<ProductDetails />} />
           <Route path='/cart' element={<ShoppingCart />} />
           <Route path='/checkout' element={<ContactInformation/>} />

@@ -6,10 +6,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const ProductComponent = () => {
-        const likeFune = () => {
-                setLiked(!liked)
-        }
-        const [liked, setLiked] = useState(false);
+        const [likeArray, updateLikeArray] = useState([]);
+
+        const onClick = (id) => {
+                let likes = [];
+                if (likeArray.includes(id)) {
+                        likes = likeArray.filter((itemId) => itemId !== id);
+                } else {
+                        likes = [...likeArray, id];
+                }
+
+                updateLikeArray(likes);
+        };
         const products = useSelector((state) => state.allProducts.products);
         const renderList = products.map((product) => {
                 const { id, title, image, price, category } = product;
@@ -25,12 +33,14 @@ const ProductComponent = () => {
                                 <div className="content">
                                         <div className="header">
                                                 <h4>{title}</h4>
-                                                </div>
+                                        </div>
                                         <div className="meta price">${price}</div>
                                         <div className="meta">{category}</div>
                                         <div>
-                                                <svg onClick={() => likeFune()} xmlns="http://www.w3.org/2000/svg" width="22.903" height="20.232" viewBox="0 0 22.903 20.232">
-                                                        <path id="heart" d="M20.84,4.61a5.5,5.5,0,0,0-7.78,0L12,5.67,10.94,4.61a5.5,5.5,0,0,0-7.78,7.78l1.06,1.06L12,21.23l7.78-7.78,1.06-1.06a5.5,5.5,0,0,0,0-7.78Z" transform="translate(-0.549 -1.998)" fill={liked ? "#333" : "none"} stroke="#172026" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                                <svg onClick={() => onClick(product.id)} name={product.id} className="like" xmlns="http://www.w3.org/2000/svg" width="22.903" height="20.232" viewBox="0 0 22.903 20.232">
+                                                        <path id="heart" d="M20.84,4.61a5.5,5.5,0,0,0-7.78,0L12,5.67,10.94,4.61a5.5,5.5,0,0,0-7.78,7.78l1.06,1.06L12,21.23l7.78-7.78,1.06-1.06a5.5,5.5,0,0,0,0-7.78Z"
+                                                                transform="translate(-0.549 -1.998)" fill={likeArray?.includes(product.id) ? "black" : "none"}
+                                                                stroke={likeArray?.includes(product.id) ? "black" : "#172026"} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                                 </svg>
                                         </div>
                                 </div>

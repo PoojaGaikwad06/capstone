@@ -5,6 +5,7 @@ import cartbag from "../../../Assets/cartbag.png";
 import menubtn from "../../../Assets/menubtn.png";
 import { Link, NavLink } from "react-router-dom";
 
+
 class Header extends React.Component {
     state = { flag: false }
     render() {
