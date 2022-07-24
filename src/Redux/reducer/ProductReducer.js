@@ -60,12 +60,12 @@ export const addCheckoutReducer = (state = [], { type, playload }) => {
     }
 };
 
-const removeProduct =(state, payload) => {
+// const removeProduct =(state, payload) => {
 
-    let products = cloneDeep(state.cart);
+//     let products = cloneDeep(state.cart);
   
-    products = state.cart.filter(o => o.id !== payload.id);
+//     products = state.cart.filter(o => o.id !== payload.id);
   
-    return {...state, cart: products};
+//     return {...state, cart: products};
   
-  }
+//   }

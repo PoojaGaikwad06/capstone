@@ -40,15 +40,15 @@ export const addTOCheckout = (p) => {
     };
 };
 
-export const removeSelectedProduct = (payload) => {
+// export const removeSelectedProduct = (payload) => {
 
-    return {
+//     return {
   
-      type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+//       type: ActionTypes.REMOVE_SELECTED_PRODUCT,
   
-      payload,
+//       payload,
   
-    };
+//     };
   
-  };
+//   };
 

@@ -10,7 +10,7 @@ import remove from "../../Assets/remove.png";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
 import {Link} from 'react-router-dom';
-import { removeSelectedProduct } from "../../Redux/actions/ProductAction";
+// import { removeSelectedProduct } from "../../Redux/actions/ProductAction";
 
 const ShoppingCart = () => {
     const addCart = useSelector((state) => state.addCart);
@@ -30,9 +30,9 @@ const ShoppingCart = () => {
     }
     //Quantity IncDec End
 
-    const removeitem = (item) => {
-        dispatch(removeSelectedProduct(item));
-    }
+    // const removeitem = (item) => {
+    //     dispatch(removeSelectedProduct(item));
+    // }
     return (
         <>
             <section className="ui grid container">
@@ -69,7 +69,7 @@ const ShoppingCart = () => {
                                             </div>
                                         </div>
                                         <div className="handdle-section">
-                                            <img src={remove} className="remove-img" onClick={() => removeitem(product)} />
+                                            <img src={remove} className="remove-img"  />
                                             <div className="cart-handle-name">
                                                 <p>Remove Item</p>
                                             </div>
