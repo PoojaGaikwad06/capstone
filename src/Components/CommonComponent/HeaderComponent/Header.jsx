@@ -36,7 +36,10 @@ class Header extends React.Component {
                         </ul>
                     </nav>
                     <div className="Cart-Bag">
-                        <div><img src={cartbag} alt="cart-bag" className="Cart-Bag-Icon" /></div>
+                        <NavLink to={'/cart'}>
+                            <div><img src={cartbag} alt="cart-bag" className="Cart-Bag-Icon" /></div>
+                        </NavLink>
+
                     </div>
                 </header>
 
@@ -71,7 +74,13 @@ class Header extends React.Component {
                         </Link>
                     </div>
                     <div className="Mob-Icon-Cart">
-                        <div><img src={cartbag} alt="cart-bag" className="Cart-Bag" /></div>
+
+                        <div>
+                            <NavLink to={'/cart'}>
+
+                                <img src={cartbag} alt="cart-bag" className="Cart-Bag" /></NavLink>
+                        </div>
+
                     </div>
                 </div>
             </>

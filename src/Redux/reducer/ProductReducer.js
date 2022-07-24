@@ -1,4 +1,5 @@
 import { ActionTypes } from "../contants/Action-Types";
+import { cloneDeep } from "lodash";
 
 const initialState = {
     products: []            //product listing data
@@ -59,3 +60,12 @@ export const addCheckoutReducer = (state = [], { type, playload }) => {
     }
 };
 
+const removeProduct =(state, payload) => {
+
+    let products = cloneDeep(state.cart);
+  
+    products = state.cart.filter(o => o.id !== payload.id);
+  
+    return {...state, cart: products};
+  
+  }

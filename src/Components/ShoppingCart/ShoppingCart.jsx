@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux/es/exports";
+import { useSelector,useDispatch } from "react-redux/es/exports";
 import CartAccordian from "../ShoppingCart/CartAccordian";
 import RecentlyViewed from "./RecentlyViewed";
 import PricingSummary from "./PricingSummary";
@@ -9,7 +9,8 @@ import heart1 from "../../Assets/heart1.png";
 import remove from "../../Assets/remove.png";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
-
+import {Link} from 'react-router-dom';
+import { removeSelectedProduct } from "../../Redux/actions/ProductAction";
 
 const ShoppingCart = () => {
     const addCart = useSelector((state) => state.addCart);
@@ -28,6 +29,10 @@ const ShoppingCart = () => {
         }
     }
     //Quantity IncDec End
+
+    const removeitem = (item) => {
+        dispatch(removeSelectedProduct(item));
+    }
     return (
         <>
             <section className="ui grid container">
@@ -58,13 +63,13 @@ const ShoppingCart = () => {
 
                                     <div className="cart-quantity-handdle">
                                         <div className="handdle-section">
-                                            <img src={edit} className="edit-img" />
+                                        <Link to={`/product/${ad.id}`} ><img src={edit} className="edit-img" /></Link>
                                             <div className="cart-handle-name">
                                                 <p>Edit Item</p>
                                             </div>
                                         </div>
                                         <div className="handdle-section">
-                                            <img src={remove} className="remove-img" />
+                                            <img src={remove} className="remove-img" onClick={() => removeitem(product)} />
                                             <div className="cart-handle-name">
                                                 <p>Remove Item</p>
                                             </div>

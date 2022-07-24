@@ -89,10 +89,10 @@ header {
 
   }
   .Cart-Bag::after{
-    content: attr(data-cart-value);
+    content: "0";
     position: relative;
-    right: 5px;
-    bottom: 15px;
+    left: 10px;
+    bottom: 37px;
     background: #fda65d;
     padding: 5px;
     border-radius: 50%;
@@ -101,5 +101,6 @@ header {
     width: 1rem;
     text-align: center;
     font-size: 1rem;
+    align-self: normal;
   }
 }

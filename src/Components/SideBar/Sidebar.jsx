@@ -12,7 +12,7 @@ const Sidebar = () => {
                 <p>Categories</p>
                 <label><input type="checkbox" className="check-box" />Jewelery</label>
                 <label><input type="checkbox" className="check-box" />Electronics</label>
-                <label><input type="checkbox" className="check-box" />Electronics</label>
+                <label><input type="checkbox" className="check-box" />Mens's Clothing</label>
                 <label><input type="checkbox" className="check-box" />Women's Clothing</label>
             </div>
             <hr className="divider"></hr>

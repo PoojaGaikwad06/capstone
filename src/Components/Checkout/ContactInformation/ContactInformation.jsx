@@ -10,12 +10,39 @@ import ShippingMethod from "../ShippingMethod/ShippingMethod";
 import PaymentInfo from "../PaymentInfo/PaymentInfo";
 import AddProduct from "../AddProduct/AddProduct";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const ContactInformation = () => {
-
+    const shippingMethod_Store = useSelector((state) => state.shippingMethod.shippingMethod);
+    const paymentInfo_Store = useSelector((state) => state.paymentInfo.paymentInfo);
     const shippingdata_store = useSelector((state) => state.shippingdata.shippingdata);
+    const [placeorderflag, Set_placeorderflag] = useState({ ...shippingdata_store, ...shippingMethod_Store, ...paymentInfo_Store });
+    useEffect(() => {
+        Set_placeorderflag(()=>{
+            return {
+                ...shippingdata_store, ...shippingMethod_Store, ...paymentInfo_Store
+            }
+              });
+        debugger
+        console.log(placeorderflag)
+    }, [shippingdata_store, shippingMethod_Store, paymentInfo_Store])
+
+    const toggle = () => {
+        let flag = false;
+        for (let key in placeorderflag) {
+            if (key !== 'streetaddress2' && !placeorderflag[key]) {
+                flag = true;
+                break;
+
+            }
+        }
+        
+        return flag;
+
+    }
     const { pathname } = useLocation();
+    const navigate = useNavigate();
     const [ShippingInfo_state, Set_ShippingInfo_state] = useState(shippingdata_store);
     const {
         register,
@@ -31,7 +58,6 @@ const ContactInformation = () => {
     let dispatch = useDispatch();
 
     const onSubmit = (data) => {
-        debugger
         toggleEditMode(false);
         Set_ShippingInfo_state(
             (pre) => {
@@ -43,26 +69,7 @@ const ContactInformation = () => {
     const onEdit = () => {
         toggleEditMode(true);
     }
-    // const setShippingInfoData = (ev) => {
 
-    //     let { value, name } = ev.target;
-
-    //     Set_ShippingInfo_state(
-
-    //         (pre) => {
-
-    //             return {
-
-    //                 ...pre,
-
-    //                 [name]: value,
-
-    //             }
-    //         }
-
-    //     )
-
-    // }
 
     return (
         <>
@@ -85,29 +92,31 @@ const ContactInformation = () => {
                         <div className="contact-information_forms-section">
                             <div>
                                 {isEditMode && pathname === "/checkout" ? <form name="shipping-details_form" className="shipping-details_form" action="" onSubmit={handleSubmit(onSubmit)}>
-                                    <div>
-                                        <label className="form-labels-txt">Email</label><br />
-                                        <input type="text" name="emailid" className="input-textbox-box" placeholder="abc@xyz.com"
-                                            {...register('emailid', {
-                                                required: 'Email is required',
-                                                pattern: {
-                                                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                                    message: 'Enter Valid Email',
-                                                },
-                                            })} />
-                                        <p style={{ color: "red" }}>{errors?.emailid?.message}</p>
-                                    </div>
-                                    <div>
-                                        <label className="form-labels-txt">Phone Number</label><br />
-                                        <input type="number" name="phonenumber" className="input-textbox" placeholder="22 222 2222"
-                                            {...register('phonenumber', {
-                                                required: 'Phone Number is required',
-                                                pattern: {
-                                                    value: /^[6-9]\d{9}$/,
-                                                    message: 'Enter Valid Phone No',
-                                                },
-                                            })} />
-                                        <p style={{ color: "red" }}>{errors?.phonenumber?.message}</p>
+                                    <div className="con-main-container">
+                                        <div className="input-con">
+                                            <label className="form-labels-txt">Email</label><br />
+                                            <input type="text" name="emailid" className="input-textbox-box" placeholder="abc@xyz.com"
+                                                {...register('emailid', {
+                                                    required: 'Email is required',
+                                                    pattern: {
+                                                        value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                                        message: 'Enter Valid Email',
+                                                    },
+                                                })} />
+                                            <p style={{ color: "red" }}>{errors?.emailid?.message}</p>
+                                        </div>
+                                        <div className="input-con">
+                                            <label className="form-labels-txt">Phone Number</label><br />
+                                            <input type="number" name="phonenumber" className="input-textbox" placeholder="22 222 2222"
+                                                {...register('phonenumber', {
+                                                    required: 'Phone Number is required',
+                                                    pattern: {
+                                                        value: /^[6-9]\d{9}$/,
+                                                        message: 'Enter Valid Phone No',
+                                                    },
+                                                })} />
+                                            <p style={{ color: "red" }}>{errors?.phonenumber?.message}</p>
+                                        </div>
                                     </div>
                                     <h4><b>1. Shipping Information</b></h4>
                                     <label className="form-labels-txt">Country</label><br />
@@ -197,7 +206,7 @@ const ContactInformation = () => {
                                                             message: 'Enter State Name',
                                                         },
                                                     })}
-                                                > 
+                                                >
                                                     <option value="Select">Select</option>
                                                     <option value="AP">Andhra Pradesh</option>
                                                     <option value="AN">Andaman and Nicobar Islands</option>
@@ -286,12 +295,12 @@ const ContactInformation = () => {
                                 </div>
                             </div>
                         </div>
-                        {pathname === "/checkout" ? <Link to={`/order`}>
-
-                            <button className="placebtn">place order</button>
-                            <p color="#333">By Clicking confirm order you agree to our <br />Terms and Conditions
-                            </p>
-                        </Link> : ""}
+                        {pathname === "/checkout" ?
+                            <>
+                                <button className="placebtn" disabled={toggle()} onClick={() => navigate('/order')}>place order</button>
+                                <p color="#333">By Clicking confirm order you agree to our <br />Terms and Conditions
+                                </p>
+                            </>: ""}
                     </div>
 
                     {pathname === "/checkout" ? <div className="contact-information_pricing-summary-column">

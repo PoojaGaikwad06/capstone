@@ -13,7 +13,6 @@ const PaymentInfo = () => {
     const { pathname } = useLocation();
 
     const [isEditMode, toggleEditMode] = useState(false);
-    // const { handleSubmit } = useForm({ shouldUnregister: false });
     const paymentInfo_Store = useSelector((state) => state.paymentInfo.paymentInfo);
     const [PaymentInfo_state, Set_PaymentInfo_state] = useState(paymentInfo_Store);
     let dispatch = useDispatch();
@@ -22,11 +21,6 @@ const PaymentInfo = () => {
         handleSubmit,
         formState: { errors }
     } = useForm({ mode: "all", defaultValues: PaymentInfo_state });
-
-
-
-
-
 
     const onSubmit = (data) => {
         toggleEditMode(!isEditMode);

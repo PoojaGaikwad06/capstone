@@ -20,6 +20,7 @@ export const selectedProduct = (product) => {
 export const removeselectedProduct = (product) => {
     return {
         type: ActionTypes.REMOVE_SELECTED_PRODUCTS,
+        
     };
 };
 
@@ -38,4 +39,16 @@ export const addTOCheckout = (p) => {
         playload: p,
     };
 };
+
+export const removeSelectedProduct = (payload) => {
+
+    return {
+  
+      type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+  
+      payload,
+  
+    };
+  
+  };
 
