@@ -1,5 +1,4 @@
 import { ActionTypes } from "../contants/Action-Types";
-import { cloneDeep } from "lodash";
 
 const initialState = {
     products: []            //product listing data
@@ -49,6 +48,15 @@ export const addProductReducer = (state = [], { type, playload }) => {
             return state;
     }
 };
+//remove product from detail page
+export const removeProductReducer = (state = [], { type, playload }) => {
+    switch (type) {
+        case ActionTypes.DELETE_FROM_CART:            
+            return {};
+        default:
+            return state;
+    }
+};
 
 export const addCheckoutReducer = (state = [], { type, playload }) => {
     switch (type) {
@@ -60,12 +68,3 @@ export const addCheckoutReducer = (state = [], { type, playload }) => {
     }
 };
 
-// const removeProduct =(state, payload) => {
-
-//     let products = cloneDeep(state.cart);
-  
-//     products = state.cart.filter(o => o.id !== payload.id);
-  
-//     return {...state, cart: products};
-  
-//   }

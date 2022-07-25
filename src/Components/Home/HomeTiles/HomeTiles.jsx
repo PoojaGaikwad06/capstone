@@ -13,7 +13,7 @@ const HomeTiles = () => {
         <section className="home-tile-section">
             <div className="tile-women">
                 <div className="tile-women-img">
-                <Link to={'/product'}>
+                <Link to='/product' state={{cond:"women's clothing"}}>
                     <img src={women} alt="women-tile" />
                 </Link>
                 </div>
@@ -25,7 +25,7 @@ const HomeTiles = () => {
             </div>
             <div className="tile-men">
                 <div className="tile-men-img">
-                <Link to={'/product'}>
+                <Link to='/product' state={{cond:"men's clothing"}}>
                     <img src={men} alt="men-tile" />
                 </Link>
 
@@ -38,7 +38,7 @@ const HomeTiles = () => {
             </div>
             <div className="tile-Jewellery">
                 <div className="tile-Jewellery-img">
-                <Link to={'/product'}>
+                <Link to='/product' state={{cond:"jewelery"}}>
                     <img src={jwellary} alt="men-tile" />
                 </Link>
                 </div>
@@ -50,7 +50,7 @@ const HomeTiles = () => {
             </div>
             <div className="tile-electronics">
                 <div className="tile-electronics-img">
-                <Link to={'/product'}>
+                <Link to='/product' state={{cond:"Electronics"}}>
                     <img src={electronic} alt="Electronics-tile" />
                 </Link>
                 </div>

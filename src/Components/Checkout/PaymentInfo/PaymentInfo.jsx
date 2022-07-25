@@ -13,6 +13,7 @@ const PaymentInfo = () => {
     const { pathname } = useLocation();
 
     const [isEditMode, toggleEditMode] = useState(false);
+    // const { handleSubmit } = useForm({ shouldUnregister: false });
     const paymentInfo_Store = useSelector((state) => state.paymentInfo.paymentInfo);
     const [PaymentInfo_state, Set_PaymentInfo_state] = useState(paymentInfo_Store);
     let dispatch = useDispatch();
@@ -21,6 +22,11 @@ const PaymentInfo = () => {
         handleSubmit,
         formState: { errors }
     } = useForm({ mode: "all", defaultValues: PaymentInfo_state });
+
+
+
+
+
 
     const onSubmit = (data) => {
         toggleEditMode(!isEditMode);
@@ -144,7 +150,7 @@ const PaymentInfo = () => {
                     </div>
                     <div className="shipping-method-content-payment">
                         <p>
-                        {PaymentInfo_state.holdername} <br />{PaymentInfo_state.cno}
+                        {PaymentInfo_state.holdername} <br />{PaymentInfo_state.cno}<br/>{PaymentInfo_state.cvv}
                         </p>
                     </div>
                 </section>}

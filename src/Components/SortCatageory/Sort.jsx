@@ -2,6 +2,8 @@ import React from "react";
 import "./Sort.scss";
 import sliders from "../../Assets/sliders.png"
 import arrowdown from "../../Assets/arrowdown.png"
+import { Link} from "react-router-dom";
+
 
 
 const Sort = () => {
@@ -10,7 +12,7 @@ const Sort = () => {
             <section className="sort-container">
                 <div className="sort-cat">
                     <p>
-                        Clothing / Women’s / Outerwear
+                        <Link to={'/home'} ><span style={{ color: "#E26A2C" }}>Dashboard</span> </Link>/ Product List
                     </p>
                 </div>
                 <div className="sort-Result">

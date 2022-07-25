@@ -5,7 +5,7 @@ import heart from "../../Assets/heart.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const ProductComponent = () => {
+const ProductComponent = (props) => {
         const [likeArray, updateLikeArray] = useState([]);
 
         const onClick = (id) => {
@@ -18,7 +18,16 @@ const ProductComponent = () => {
 
                 updateLikeArray(likes);
         };
-        const products = useSelector((state) => state.allProducts.products);
+        let products = useSelector((state) => state.allProducts.products);        
+        if(props.cfilter.length>0){
+        //console.log("filter: "+props.cfilter);
+        products =  products.filter(item=>{ return props.cfilter.includes(item.category.toLowerCase());}); 
+        //products =  products.filter(item=>item.category.toLowerCase().includes(props.cfilter[0])); 
+        //console.log("product: "+xx);
+        }else{
+                products = props.cond!=="All" ? products.filter(item=>item.category.toLowerCase()===props.cond.toLowerCase()):products;
+        }
+        
         const renderList = products.map((product) => {
                 const { id, title, image, price, category } = product;
                 return (

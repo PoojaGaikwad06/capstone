@@ -18,6 +18,9 @@ $FormBtnColor: #e26a2c;
     padding: 0px 17px;
     color: $CheckoutPageColor;
 }
+.con-main-container {
+    grid-template-columns: auto;
+}
 
 .contact-info-heading {
     /* UI Properties */
@@ -341,3 +344,9 @@ opacity: 1;
     padding: 0 5%;
 }
 .placebtn p{color: #333;}
+
+.con-main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}

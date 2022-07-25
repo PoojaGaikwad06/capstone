@@ -12,7 +12,7 @@ const HomeBanner =()=>{
             <div className="home-banner-content">
                 <h1>Shop the new<br/>Signature Collection</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis mattis aliquam faucibus purus.</p>
-                <NavLink to={'/product'}>
+                <NavLink to={'/product'} state={{cond:'All'}}>
                 <button className="home-banner-btn">SHOP NOW</button>
                 </NavLink>
             </div>

@@ -24,7 +24,6 @@ const ContactInformation = () => {
                 ...shippingdata_store, ...shippingMethod_Store, ...paymentInfo_Store
             }
               });
-        debugger
         console.log(placeorderflag)
     }, [shippingdata_store, shippingMethod_Store, paymentInfo_Store])
 

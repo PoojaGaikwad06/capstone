@@ -49,12 +49,28 @@ header {
   display: none;
 }
 
+.cart-count{
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+  background: #fda65d;
+  padding: 5px;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-grid;
+  width: 25px;
+  text-align: center;
+}
 
+//Desktop View
 @media screen and (min-width: 769px) and (max-width: 1920px) {
   .Mobile-Header-Section {
     display: none;
   }
-
+  .Cart-Bag{
+    width: 10%;
+        text-align: end;
+    }
   header {
     align-items: center;
     background-color: $Header-Background-Color;
@@ -79,8 +95,12 @@ header {
 
   .Nav__Link {
     display: flex;
+    justify-content: center;
+    text-align: center;
+
 
   }
+  .Navbar-Desktop{width: 80%;}
 
   .Nav__Link li {
     color: $Header-Text-Color;
@@ -88,19 +108,16 @@ header {
     padding: 0 20px;
 
   }
-  .Cart-Bag::after{
-    content: "0";
+  .cart-count{
     position: relative;
-    left: 10px;
-    bottom: 37px;
+    right: 10px;
+    bottom: 15px;
     background: #fda65d;
     padding: 5px;
     border-radius: 50%;
     color: #fff;
     display: inline-grid;
-    width: 1rem;
+    width: 25px;
     text-align: center;
-    font-size: 1rem;
-    align-self: normal;
   }
 }

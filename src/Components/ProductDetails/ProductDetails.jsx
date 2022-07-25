@@ -13,6 +13,20 @@ import spinner from "../../Assets/spinner.gif";
 
 
 const ProductDetails = () => {
+    const [likeArray, updateLikeArray] = useState([]);
+
+    const onClick = (id) => {
+            let likes = [];
+            if (likeArray.includes(id)) {
+                    likes = likeArray.filter((itemId) => itemId !== id);
+            } else {
+                    likes = [...likeArray, id];
+            }
+
+            updateLikeArray(likes);
+    };
+
+
     let navigate = useNavigate();
     const product = useSelector((state) => state.product);
     const { id, title, image, price, category, description } = product;
@@ -75,7 +89,7 @@ const ProductDetails = () => {
                     </div>
                     <div className="pdetail-info">
                         <div className="breadcurb">
-                            <p className="breadcurb-info">Clothing / Women’s / Outerwear</p>
+                            <p className="breadcurb-info">Dashboard / Product List / Product Details</p>
                         </div>
                         <h1>{title}</h1>
                         <h2>${price}</h2>
@@ -95,8 +109,11 @@ const ProductDetails = () => {
                         <button onClick={navigateToCart} className="add-cart">ADD TO CART</button>
                         <div className="share-product">
                             <div className="wishlist-1">
-                                <img src={heart} alt="like" className="whishlist-icon" />
-                                <p>Save</p>
+                            <svg onClick={() => onClick(product.id)} name={product.id} className="like" xmlns="http://www.w3.org/2000/svg" width="22.903" height="20.232" viewBox="0 0 22.903 20.232">
+                                                        <path id="heart" d="M20.84,4.61a5.5,5.5,0,0,0-7.78,0L12,5.67,10.94,4.61a5.5,5.5,0,0,0-7.78,7.78l1.06,1.06L12,21.23l7.78-7.78,1.06-1.06a5.5,5.5,0,0,0,0-7.78Z"
+                                                                transform="translate(-0.549 -1.998)" fill={likeArray?.includes(product.id) ? "black" : "none"}
+                                                                stroke={likeArray?.includes(product.id) ? "black" : "#172026"} strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                                </svg>                                <p>Save</p>
                             </div>
                             <div className="wishlist-2">
                                 <img src={share} alt="like" className="share-icon" />

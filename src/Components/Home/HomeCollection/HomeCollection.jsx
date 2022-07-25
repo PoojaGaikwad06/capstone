@@ -15,10 +15,10 @@ const HomeCollection = () => {
                 <h6>Lorem Ipsum Dolor Tempor</h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna lorem ipsum dolor sit amet.</p>
                 <div className="home-collection-btn">
-                <NavLink to={'/product'}>
+                <NavLink to={'/product'} state={{cond:'All'}}>
                     <button className="btn-shop">SHOP NOW</button>
                 </NavLink>
-                <NavLink to={'/product'}>
+                <NavLink to={'/product'} state={{cond:'All'}}>
                     <button className="btn-collection">SHOP COLLECTION</button>
                 </NavLink>
                     <div className="collection-divider">

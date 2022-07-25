@@ -4,17 +4,36 @@ import VeniaLogo from "../../../Assets/VeniaLogo.png"
 import cartbag from "../../../Assets/cartbag.png";
 import menubtn from "../../../Assets/menubtn.png";
 import { Link, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import store from "../../../Redux/store";
 
 
 class Header extends React.Component {
     state = { flag: false }
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+          items: [],
+        };
+    
+        store.subscribe(() => {
+    
+          this.setState({
+            items: store.getState().addCart
+          });
+        });
+      }
+    
     render() {
 
         return (
             <>
                 <header>
                     <Link to={`/capstone`}>
+                        <div className="logo-imgs">
                         <img src={VeniaLogo} alt="Venia" className="Venia-Logo" />
+                        </div>
                     </Link>
                     <nav className="Navbar-Desktop">
                         <ul className="Nav__Link">
@@ -25,20 +44,34 @@ class Header extends React.Component {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={'/product'}>
+                                <NavLink to={'/product'} state={{cond:'All'}}>
                                     All
                                 </NavLink>
                             </li>
-                            <li>Men</li>
-                            <li>Women</li>
-                            <li>Jewellery</li>
-                            <li>Electronics</li>
+                            <li>
+                            <Link to='/product' state={{cond:"men's clothing"}}>
+                                    Men
+                            </Link>
+                            </li>
+                            <li>
+                            <Link to='/product' state={{cond:"women's clothing"}}>
+                                    Women
+                            </Link>
+                            </li>
+                            <li>
+                            <Link to='/product' state={{cond:"jewelery"}}>
+                                Jewellery
+                            </Link>
+                            </li>
+                            <li>
+                            <Link to='/product' state={{cond:"Electronics"}}>
+                                Electronics
+                            </Link>
+                            </li>
                         </ul>
                     </nav>
                     <div className="Cart-Bag">
-                        <NavLink to={'/cart'}>
-                            <div><img src={cartbag} alt="cart-bag" className="Cart-Bag-Icon" /></div>
-                        </NavLink>
+                        <div><Link to='/cart'><img src={cartbag} alt="cart-bag" className="Cart-Bag-Icon" /></Link> <span className="cart-count">{this.state.items.length}</span></div>
 
                     </div>
                 </header>
@@ -58,14 +91,30 @@ class Header extends React.Component {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to={'/product'}>
+                                <NavLink to={'/product'} state={{cond:'All'}}>
                                     All
                                 </NavLink>
                             </li>
-                            <li>Men</li>
-                            <li>Women</li>
-                            <li>Jewellery</li>
-                            <li>Electronics</li>
+                            <li>
+                            <Link to='/product' state={{cond:"men's clothing"}}>
+                                    Men
+                            </Link>
+                            </li>
+                            <li>
+                            <Link to='/product' state={{cond:"women's clothing"}}>
+                                    Women
+                            </Link>
+                            </li>
+                            <li>
+                            <Link to='/product' state={{cond:"jewelery"}}>
+                                Jewellery
+                            </Link>
+                            </li>
+                            <li>
+                            <Link to='/product' state={{cond:"Electronics"}}>
+                                Electronics
+                            </Link>
+                            </li>
                         </ul>
                     </nav> : ""}
                     <div className="Mobile-Logo">
@@ -74,13 +123,7 @@ class Header extends React.Component {
                         </Link>
                     </div>
                     <div className="Mob-Icon-Cart">
-
-                        <div>
-                            <NavLink to={'/cart'}>
-
-                                <img src={cartbag} alt="cart-bag" className="Cart-Bag" /></NavLink>
-                        </div>
-
+                    <div><Link to='/cart'><img src={cartbag} alt="cart-bag" className="Cart-Bag-Icon" /></Link> <span className="cart-count">{this.state.items.length}</span></div>
                     </div>
                 </div>
             </>

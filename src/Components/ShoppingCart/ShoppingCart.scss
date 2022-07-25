@@ -23,7 +23,7 @@ $desktop-xl-width: 1920px;
 
         grid-template-columns: auto !important;
     }
-
+  
     .cart-accordian-section {
         width: 100% !important;
     }
@@ -39,11 +39,9 @@ $desktop-xl-width: 1920px;
 
 
 
-
-
 .shopping-cart-section {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1em;
 }
 
@@ -125,4 +123,21 @@ $desktop-xl-width: 1920px;
 .input-grp-txt {
     background-color: transparent;
     border: none;
+}
+
+@media all and (min-width: 320px){
+    .shopping-cart-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+
+    }
+}
+
+@media all and (min-width: 769px){
+    .shopping-cart-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1em;
+    }
 }

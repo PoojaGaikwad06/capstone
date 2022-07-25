@@ -13,7 +13,7 @@ const HomeConquer=()=>{
             <div className="home-conqure-content">
                 <h1>Conquer your next adventure</h1>
                 <p>Lorem Ipsum Dolor Tempor</p>
-                <NavLink to={'/product'}>
+                <NavLink to='/product' state={{cond:"Electronics"}}>
                 <button className="devices-btn">SHOP DEVICES</button>
                 </NavLink>
             </div>
