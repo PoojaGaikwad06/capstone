@@ -1,12 +1,62 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./PricingSummary.scss";
 import Paypal from "../../Assets/Paypal.png";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const PricingSummary = () => {
-    let navigate=useNavigate()
+    const ValuePercentage = (discount, price) => {
 
-    const navigateTOCheckout=()=>{
+
+        const discountedValue = price - (price * (discount / 100));
+
+        return discountedValue < 0 ? discountedValue : discountedValue;
+
+    }
+
+    const [subTotal, setSubTotal] = useState(0);
+
+    const [coupon, setCoupon] = useState(0);
+
+    const [giftCard, setGiftCardValue] = useState(0);
+
+    const [estimatedTax, setEstimatedTax] = useState(0);
+
+    const [isshippingFree, setisshippingFree] = useState(true);
+    const item_cart = useSelector(store => store.addCart);
+debugger
+    useEffect(() => {
+
+        let total = 0;
+
+        item_cart.forEach(item => {
+            total = total + (item.price * item.qty);
+
+        });
+console.log(total,'product total');
+        setSubTotal(total);
+
+        setCoupon(total - ValuePercentage(20, total));
+
+        setGiftCardValue(total > 150 ? 100 : 0);
+
+        setEstimatedTax(total - ValuePercentage(5, total));
+
+        setisshippingFree(total > 500);
+    }, [item_cart]);
+
+    const getEstimatedTotal = () => {
+
+        const es = isshippingFree ? 0 : 50;
+
+        return subTotal - coupon - giftCard + estimatedTax + es;
+
+    }
+    console.log(subTotal,'temp');
+
+    let navigate = useNavigate()
+
+    const navigateTOCheckout = () => {
         navigate("/checkout")
     }
     return (
@@ -20,7 +70,7 @@ const PricingSummary = () => {
                         <p>Subtotal</p>
                     </div>
                     <div className="Subtotal-amt">
-                        <p>$ 388.00</p>
+                        <p>$ {subTotal.toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -28,7 +78,7 @@ const PricingSummary = () => {
                         <p>Coupon</p>
                     </div>
                     <div className="Coupon-amt">
-                        <p>- $ 77.60</p>
+                        <p>$ {coupon.toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -36,7 +86,7 @@ const PricingSummary = () => {
                         <p>Gift Card</p>
                     </div>
                     <div className="Gift-Card-amt">
-                        <p>- $ 100.00</p>
+                        <p>$ {giftCard}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -44,7 +94,7 @@ const PricingSummary = () => {
                         <p>Estimated tax</p>
                     </div>
                     <div className="Estimated-tax-amt">
-                        <p>$ 23.28</p>
+                        <p>$ {estimatedTax.toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -52,7 +102,7 @@ const PricingSummary = () => {
                         <p>Estimated shipping</p>
                     </div>
                     <div className="Estimated-tax-amt">
-                        <p>FREE</p>
+                        <p>$ {isshippingFree ? 0 : 50}</p>
                     </div>
                 </div>
                 <div className="pricing-content">
@@ -60,7 +110,7 @@ const PricingSummary = () => {
                         <p>Estimated Total</p>
                     </div>
                     <div className="Estimated-Total-amt">
-                        <p>$ 233.68</p>
+                        <p>$ {getEstimatedTotal().toFixed(2)}</p>
                     </div>
                 </div>
                 <button onClick={navigateTOCheckout} className="checkout-btn"><i class="fa fa-user-o" aria-hidden="true"></i>CHECKOUT</button>

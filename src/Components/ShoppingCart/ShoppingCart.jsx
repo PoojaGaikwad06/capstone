@@ -65,10 +65,9 @@ const ShoppingCart = () => {
             <section className="ui grid container">
                 <div className="shopping-cart-container">
                     {addCart.length > 0 ?
-                        addCart.map((ad, i) => {
-                            return (
-
-                                <div key={i} className="shopping-cart-section">
+                        <div className="">
+                            {addCart.map((ad, i) => {
+                                return (<div key={i} className="shopping-cart-section">
                                     <div className="cart-img-section">
                                         <img src={ad.image} className="cartimg" alt="" />
                                     </div>
@@ -114,11 +113,11 @@ const ShoppingCart = () => {
                                         </div>
                                     </div>
 
+                                </div>)
+                            })}
 
-                                </div>
 
-                            )
-                        }) :
+                        </div> :
                         <h2 className="empty-cart">Your Cart is Empty</h2>
                     }
                     <div className="pricing">
