@@ -119,7 +119,7 @@ const ShoppingCart = () => {
 
                             )
                         }) :
-                        <h2>Your Cart is Empty</h2>
+                        <h2 className="empty-cart">Your Cart is Empty</h2>
                     }
                     <div className="pricing">
                         <PricingSummary />
