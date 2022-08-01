@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./PricingSummary.scss";
 import Paypal from "../../Assets/Paypal.png";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +24,6 @@ const PricingSummary = () => {
 
     const [isshippingFree, setisshippingFree] = useState(true);
     const item_cart = useSelector(store => store.addCart);
-debugger
     useEffect(() => {
 
         let total = 0;
@@ -33,7 +32,6 @@ debugger
             total = total + (item.price * item.qty);
 
         });
-console.log(total,'product total');
         setSubTotal(total);
 
         setCoupon(total - ValuePercentage(20, total));
@@ -52,7 +50,6 @@ console.log(total,'product total');
         return subTotal - coupon - giftCard + estimatedTax + es;
 
     }
-    console.log(subTotal,'temp');
 
     let navigate = useNavigate()
 

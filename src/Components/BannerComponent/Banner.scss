@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&family=Playfair+Display:ital,wght@1,500&display=swap');
 
 
-    $banner-font-family: 'Mulish', sans-serif;
-    $banner-font-size: 16px;
-    $banner-font-weight: 700;
+$banner-font-family: 'Mulish', sans-serif;
+$banner-font-size: 16px;
+$banner-font-weight: 700;
 
-.banner-heading h1{
+.banner-heading h1 {
     color: var(--white);
     color: #fff;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
@@ -13,30 +13,34 @@
     letter-spacing: var(--unnamed-character-spacing-0);
     letter-spacing: 0;
     padding: 15%;
-    text-align: center;}
+    text-align: center;
+}
 
-.banner-section{
+.banner-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-top: 30px;
-    margin-bottom: 30px;
     font-family: $banner-font-family;
 
 }
-.banner-heading{
-  
+
+.banner-heading {
+
     background-color: #333;
     color: #ffffff;
 }
-.banner-image{
+
+.banner-image {
     margin-top: 20px;
     margin-bottom: 15px;
     height: 250px;
 }
-.Banner-image{
+
+.Banner-image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
+
 .underline {
     background-color: #E26A2C;
     border: none;
@@ -45,6 +49,7 @@
     text-align: center;
     width: 20%;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
     .banner-image {
         margin-top: 0px;
@@ -54,33 +59,46 @@
         left: 0px;
         width: 100%;
     }
+
     .banner-heading {
         background-color: #333;
         color: #ffffff;
         position: absolute;
         z-index: 1;
         margin-top: 120px;
-        width: 80%;
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 10px;
     }
+
     .banner-heading h1 {
         font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
         font: normal normal 600 43px/43px Source Serif Pro;
-      
+
     }
-    .underline{display: none;}
+
+    .underline {
+        display: none;
+    }
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1000px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
 
-.banner-heading h1 {
-    color: var(--white);
-    color: #fff;
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
-    font: normal normal 600 31px/34px Source Serif Pro;
-    letter-spacing: var(--unnamed-character-spacing-0);
-    letter-spacing: 0;
-    padding: 61px 10px 10px 10px;
-    text-align: center;
-}
+    .banner-heading h1 {
+        color: var(--white);
+        color: #fff;
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-60) var(--unnamed-font-family-source-serif-pro);
+        font: normal normal 600 31px/34px Source Serif Pro;
+        letter-spacing: var(--unnamed-character-spacing-0);
+        letter-spacing: 0;
+        padding: 61px 10px 10px 10px;
+        text-align: center;
+    }
+
+    .banner-image {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        height: 150px;
+    }
 }

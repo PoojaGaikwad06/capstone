@@ -30,12 +30,11 @@ const PaymentInfo = () => {
 
     const onSubmit = (data) => {
         toggleEditMode(!isEditMode);
-        Set_PaymentInfo_state((p)=>{
-            return {...data}
+        Set_PaymentInfo_state((p) => {
+            return { ...data }
         })
         dispatch(setpaymentInfo(data))
 
-        console.log("a", data);
     }
 
     const onEdit = () => {
@@ -43,7 +42,7 @@ const PaymentInfo = () => {
     }
 
     // const setFormdata = (ev) => {
-        
+
     //     let { value, name } = ev.target;
     //     Set_PaymentInfo_state(
     //         (pre) => {
@@ -74,26 +73,26 @@ const PaymentInfo = () => {
                                         <label for="credit-payment" className="payment-info-Labels">Credit</label><br></br>
                                     </div>
                                     <label className="form-labels">Name on Card</label><br />
-                                    <input type="text" name="holdername" className="input-textbox" 
-                                      {...register('holdername', {
-                                        required: 'Card Number is Required',
-                                        pattern: {
-                                            value: /^[A-Za-z ]+$/,
-                                            message: 'Please Enter Card Name',
-                                        },
-                                    })}
+                                    <input type="text" name="holdername" className="input-textbox"
+                                        {...register('holdername', {
+                                            required: 'Card Number is Required',
+                                            pattern: {
+                                                value: /^[A-Za-z ]+$/,
+                                                message: 'Please Enter Card Name',
+                                            },
+                                        })}
                                     />
                                     <p style={{ color: "red" }}>{errors?.holdername?.message}</p>
                                     <br />
                                     <label className="form-labels">Credit Card Number</label><br />
-                                    <input type="text" name="cno" className="input-textbox" 
-                                       {...register('cno', {
-                                        required: 'Credit Card No is Required',
-                                        pattern: {
-                                            value: /^\d{16}$/,
-                                            message: 'Please Enter Credit Card No',
-                                        },
-                                    })}
+                                    <input type="text" name="cno" className="input-textbox"
+                                        {...register('cno', {
+                                            required: 'Credit Card No is Required',
+                                            pattern: {
+                                                value: /^\d{16}$/,
+                                                message: 'Please Enter Credit Card No',
+                                            },
+                                        })}
                                     />
                                     <p style={{ color: "red" }}>{errors?.cno?.message}</p>
 
@@ -103,11 +102,11 @@ const PaymentInfo = () => {
                                         <label className="form-labels cvv-label">CVV</label><br />
                                     </div>
                                     <div className="card-details">
-                                        <input type="date" name="expdate" className="input-textbox" 
-                                        {...register('expdate')}
+                                        <input type="date" name="expdate" className="input-textbox"
+                                            {...register('expdate')}
                                         /><br />
-                                        <input type="text" name="cvv" className="cvv-input-textbox" 
-                                             {...register('cvv', {
+                                        <input type="text" name="cvv" className="cvv-input-textbox"
+                                            {...register('cvv', {
                                                 required: 'CVV No Required',
                                                 pattern: {
                                                     value: /^\d{3}$/,
@@ -146,11 +145,11 @@ const PaymentInfo = () => {
                 <section className="shipping-method-section-payment">
                     <div class="shipping-method-block-payment">
                         <h1>Payment Information</h1>
-                        {pathname === "/checkout" ? <img src={edit} className="edit-image" alt="editicon" onClick={() => onEdit()} />:""}
+                        {pathname === "/checkout" ? <img src={edit} className="edit-image" alt="editicon" onClick={() => onEdit()} /> : ""}
                     </div>
                     <div className="shipping-method-content-payment">
                         <p>
-                        {PaymentInfo_state.holdername} <br />{PaymentInfo_state.cno}<br/>{PaymentInfo_state.cvv}
+                            {PaymentInfo_state.holdername} <br />{PaymentInfo_state.cno}<br />{PaymentInfo_state.cvv}
                         </p>
                     </div>
                 </section>}

@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { useSelector } from "react-redux";
 import "./ProductComponent.scss";
-import heart from "../../Assets/heart.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -18,16 +17,13 @@ const ProductComponent = (props) => {
 
                 updateLikeArray(likes);
         };
-        let products = useSelector((state) => state.allProducts.products);        
-        if(props.cfilter.length>0){
-        //console.log("filter: "+props.cfilter);
-        products =  products.filter(item=>{ return props.cfilter.includes(item.category.toLowerCase());}); 
-        //products =  products.filter(item=>item.category.toLowerCase().includes(props.cfilter[0])); 
-        //console.log("product: "+xx);
-        }else{
-                products = props.cond!=="All" ? products.filter(item=>item.category.toLowerCase()===props.cond.toLowerCase()):products;
+        let products = useSelector((state) => state.allProducts.products);
+        if (props.cfilter.length > 0) {
+                products = products.filter(item => { return props.cfilter.includes(item.category.toLowerCase()); });
+        } else {
+                products = props.cond !== "All" ? products.filter(item => item.category.toLowerCase() === props.cond.toLowerCase()) : products;
         }
-        
+
         const renderList = products.map((product) => {
                 const { id, title, image, price, category } = product;
                 return (
@@ -43,9 +39,10 @@ const ProductComponent = (props) => {
                                         <div className="header">
                                                 <h4>{title}</h4>
                                         </div>
-                                        <div className="meta price">${price}</div>
-                                        <div className="meta">{category}</div>
-                                        <div>
+                                        <div className="meta-price">
+                                                ${price}
+                                        </div>
+                                        <div className="like-btn">
                                                 <svg onClick={() => onClick(product.id)} name={product.id} className="like" xmlns="http://www.w3.org/2000/svg" width="22.903" height="20.232" viewBox="0 0 22.903 20.232">
                                                         <path id="heart" d="M20.84,4.61a5.5,5.5,0,0,0-7.78,0L12,5.67,10.94,4.61a5.5,5.5,0,0,0-7.78,7.78l1.06,1.06L12,21.23l7.78-7.78,1.06-1.06a5.5,5.5,0,0,0,0-7.78Z"
                                                                 transform="translate(-0.549 -1.998)" fill={likeArray?.includes(product.id) ? "black" : "none"}

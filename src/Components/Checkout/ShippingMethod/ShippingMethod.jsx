@@ -1,19 +1,19 @@
 import "./ShippingMethod.scss";
 import Summary from "../Summary/Summary";
 import edit from '../../../Assets/edit.png';
-import { useForm} from 'react-hook-form';
-import { useDispatch,useSelector } from "react-redux";
+import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from "react-redux";
 import { setshippingMethod } from "../../../Redux/actions/ShippingMethod";
-import React, { useState }  from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const ShippingMethod = () => {
     const { pathname } = useLocation();
 
-    const [isEditMode , toggleEditMode] = useState(false);
-    const {handleSubmit } = useForm({ shouldUnregister: false });
+    const [isEditMode, toggleEditMode] = useState(false);
+    const { handleSubmit } = useForm({ shouldUnregister: false });
     const shippingMethod_Store = useSelector((state) => state.shippingMethod.shippingMethod);
-    const [ShippingMethod_state,Set_ShippingMethod_state]  = useState(shippingMethod_Store);
+    const [ShippingMethod_state, Set_ShippingMethod_state] = useState(shippingMethod_Store);
     let dispatch = useDispatch();
 
     const onSubmit = (data) => {
@@ -45,17 +45,17 @@ const ShippingMethod = () => {
         )
 
     }
-   
+
     return (
         <>
             <main className="shipping-method-main-section">
-                {isEditMode && pathname=== "/checkout" ?<section className="shipping-method-section-information">
+                {isEditMode && pathname === "/checkout" ? <section className="shipping-method-section-information">
                     <div className="shipping-method-section-radiobtn">
                         <div className="shipping-method-radio-text">
                             <h1>2. Shipping Method</h1>
                         </div>
                         <div className="radio-btn">
-                       <form className="shipping-method-form-section" onSubmit={handleSubmit(onSubmit)}>
+                            <form className="shipping-method-form-section" onSubmit={handleSubmit(onSubmit)}>
                                 <div className="first-btn">
                                     <input type="radio" id="html" name="radiobtnmethod" checked={ShippingMethod_state.radiobtnmethod === "Standard Shipping (4-8 business days via USPS) FREE"} value="Standard Shipping (4-8 business days via USPS) FREE" onChange={onchangeshippingMethod} className="shipping-radio-btn" />
                                     <label for="html" className="shipping-method-btn-txt">Standard Shipping (4-8 business days via USPS) FREE</label>
@@ -77,19 +77,19 @@ const ShippingMethod = () => {
                         <hr />
 
                     </div>
-                </section>:
-                     <section className="shipping-method-section-second">
-                     <div class="shipping-method-block-second">
-                         <h1>Shipping Method</h1>
-                         {pathname === "/checkout" ?<img src={edit} className="edit-image" alt="editicon" onClick={()=>onEdit()} />:""}
-                     </div>
-                     <div className="shipping-method-content-second">
-                         <p>
-                            {shippingMethod_Store.radiobtnmethod}
-                        </p>
-                         <br />
-                     </div>
-                 </section>}
+                </section> :
+                    <section className="shipping-method-section-second">
+                        <div class="shipping-method-block-second">
+                            <h1>Shipping Method</h1>
+                            {pathname === "/checkout" ? <img src={edit} className="edit-image" alt="editicon" onClick={() => onEdit()} /> : ""}
+                        </div>
+                        <div className="shipping-method-content-second">
+                            <p>
+                                {shippingMethod_Store.radiobtnmethod}
+                            </p>
+                            <br />
+                        </div>
+                    </section>}
             </main>
         </>
     )

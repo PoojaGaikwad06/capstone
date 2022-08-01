@@ -1,8 +1,8 @@
 import React from "react";
 import "./Signin.scss";
 
-const Signin =()=>{
-    return(
+const Signin = () => {
+    return (
         <main className="main-section-signin">
             <section className="singin-info-section">
                 <p className="info-txt">Sign in for Express Checkout</p>

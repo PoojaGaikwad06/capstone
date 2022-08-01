@@ -55,16 +55,16 @@ const ShippingInformation = () => {
                 <input className="checkout-input-box" type="text" id="lname" name="lname" />
             </form>
             <button className="shipping-info-btn" onClick={navigateToShippingMethod}>Continue</button>
-            <hr/>
+            <hr />
 
             <div className="shipping-method-txt">
-            2. Shipping Method
+                2. Shipping Method
             </div>
-            <hr/>
+            <hr />
             <div className="shipping-payment-txt">
-            3. Payment Information
+                3. Payment Information
             </div>
-            <hr/>
+            <hr />
 
         </section >
     )

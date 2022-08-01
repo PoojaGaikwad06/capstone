@@ -5,7 +5,6 @@ import RecentlyViewed from "./RecentlyViewed";
 import PricingSummary from "./PricingSummary";
 import "./ShoppingCart.scss";
 import edit from "../../Assets/edit.png";
-import heart1 from "../../Assets/heart1.png";
 import remove from "../../Assets/remove.png";
 import plus from "../../Assets/plus.png";
 import minus from "../../Assets/minus.png";
@@ -32,12 +31,10 @@ const ShoppingCart = () => {
     //Quantity IncDec start
     const [quantity, setQuantity] = useState(new Array(addCart.length).fill(1));
     const handleDecrement = (i) => {
-        console.log(i);
         if (quantity[i] > 1) {
             let q = quantity;
             q[i] = q[i] - 1;
             setQuantity([...q]); // decrement quantity
-            //console.log(quantity);
 
         }
     }
@@ -47,13 +44,11 @@ const ShoppingCart = () => {
             let q = quantity;
             q[i] = q[i] + 1;
             setQuantity([...q]); // increment quantity
-            //console.log(quantity);
         }
     }
     //Quantity IncDec End
 
     const removeItem = (i) => {
-        console.log("Index: " + i);
         addCart.splice(i, 1);
         let q = quantity;
         q.splice(i, 1);

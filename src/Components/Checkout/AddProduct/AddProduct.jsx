@@ -7,7 +7,6 @@ import { useSelector } from "react-redux/es/exports";
 
 const AddProduct = () => {
     const addCart = useSelector((state) => state.addCart);
-    console.log(addCart);
     const renderList = addCart.map((product) => {
         const { id, title, image, price, category } = product;
         return (

@@ -37,7 +37,7 @@
                 letter-spacing: var(--unnamed-character-spacing-0);
                 color: var(--white);
                 text-align: left;
-                font: normal normal 600 24px/30px Source Serif Pro;
+                font: normal normal 600 19px/30px Source Serif Pro;
                 letter-spacing: 0px;
                 color: #FFFFFF;
                 opacity: 1;
@@ -101,7 +101,7 @@
                 letter-spacing: var(--unnamed-character-spacing-0);
                 color: var(--white);
                 text-align: left;
-                font: normal normal 600 24px/30px Source Serif Pro;
+                font: normal normal 600 19px/30px Source Serif Pro;
                 letter-spacing: 0px;
                 color: #FFFFFF;
                 opacity: 1;
@@ -165,7 +165,7 @@
                 letter-spacing: var(--unnamed-character-spacing-0);
                 color: var(--white);
                 text-align: left;
-                font: normal normal 600 24px/30px Source Serif Pro;
+                font: normal normal 600 19px/30px Source Serif Pro;
                 letter-spacing: 0px;
                 color: #FFFFFF;
                 opacity: 1;
@@ -229,7 +229,7 @@
                 letter-spacing: var(--unnamed-character-spacing-0);
                 color: var(--white);
                 text-align: left;
-                font: normal normal 600 24px/30px Source Serif Pro;
+                font: normal normal 600 19px/30px Source Serif Pro;
                 letter-spacing: 0px;
                 color: #FFFFFF;
                 opacity: 1;
@@ -262,15 +262,11 @@
 
 //Desktop View
 
-@media all and (min-width:769px){
-    .home-tile-section{
+@media all and (min-width:769px) {
+    .home-tile-section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1em;
-        margin-top: -30px;
+        margin-top: -50px;
     }
 }
-    
-
-
-

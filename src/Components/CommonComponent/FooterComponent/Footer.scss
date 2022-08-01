@@ -4,32 +4,45 @@ $desktop-width: 1024px;
 $desktop-md-width: 1280px;
 $desktop-lg-width: 1440px;
 $desktop-xl-width: 1920px;
+
 @media only screen and (min-width: 320px) and (max-width: 850px) {
     .footer-col {
         width: 100% !important;
         margin-bottom: 15px !important;
     }
+
     .foo-container {
         margin: auto;
         text-align: left;
         padding: 20px !important;
     }
+
     .footer-col h4 {
         margin-bottom: 10px !important;
     }
+
     .footer-col ul li:not(:last-child) {
         margin-bottom: 8px Im !important;
     }
+
     .logo-btm {
-        
+
         width: 50% !important;
     }
-    .btm-footer{flex-direction: column;}
-    .btm-footer p{text-align: center;}
+
+    .btm-footer {
+        flex-direction: column;
+    }
+
+    .btm-footer p {
+        text-align: center;
+    }
 }
 
 /* Mobile Devive */
-.footer-col{width: 100%;}
+.footer-col {
+    width: 100%;
+}
 
 * {
     margin: 0;
@@ -145,4 +158,6 @@ footer {
     height: 15px;
 }
 
-.list a{color:#1b252c;}
+.list a {
+    color: #1b252c;
+}

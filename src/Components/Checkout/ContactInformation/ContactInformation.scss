@@ -18,6 +18,7 @@ $FormBtnColor: #e26a2c;
     padding: 0px 17px;
     color: $CheckoutPageColor;
 }
+
 .con-main-container {
     grid-template-columns: auto;
 }
@@ -44,18 +45,19 @@ $FormBtnColor: #e26a2c;
     margin: auto;
 }
 
-.contact-head-guest h1{
+.contact-head-guest h1 {
     /* UI Properties */
-font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-172026);
-text-align: left;
-font: normal normal 600 24px/30px Source Serif Pro;
-letter-spacing: 0px;
-color: #172026;
-opacity: 1;
-margin-top: 15px;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-172026);
+    text-align: left;
+    font: normal normal 600 24px/30px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #172026;
+    opacity: 1;
+    margin-top: 15px;
 }
+
 .guest-title {
     /* UI Properties */
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
@@ -107,38 +109,38 @@ margin-top: 15px;
 
 input {
     /* UI Properties */
-background: var(--white) 0% 0% no-repeat padding-box;
-border: 2px solid var(--gray-l2);
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 2px solid #B5B7BC;
-border-radius: 8px;
-opacity: 1;
-width: 100%;
-height: 40px;
-padding: 0 5px;
+    background: var(--white) 0% 0% no-repeat padding-box;
+    border: 2px solid var(--gray-l2);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #B5B7BC;
+    border-radius: 8px;
+    opacity: 1;
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
 }
 
-.select-country{
+.select-country {
     background: var(--white) 0% 0% no-repeat padding-box;
-border: 2px solid var(--gray-l2);
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 2px solid #B5B7BC;
-border-radius: 8px;
-opacity: 1;
-width: 100%;
-height: 40px;
+    border: 2px solid var(--gray-l2);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #B5B7BC;
+    border-radius: 8px;
+    opacity: 1;
+    width: 100%;
+    height: 40px;
 }
 
 .form-labels-txt {
-   /* UI Properties */
-font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--gray-d2);
-text-align: left;
-font: normal normal 600 13px/33px Muli;
-letter-spacing: 0px;
-color: #181C24;
-opacity: 1;
+    /* UI Properties */
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--gray-d2);
+    text-align: left;
+    font: normal normal 600 13px/33px Muli;
+    letter-spacing: 0px;
+    color: #181C24;
+    opacity: 1;
 }
 
 
@@ -168,14 +170,14 @@ opacity: 1;
 
 select#state-name {
     /* UI Properties */
-background: var(--white) 0% 0% no-repeat padding-box;
-border: 2px solid var(--gray-l2);
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 2px solid #B5B7BC;
-border-radius: 8px;
-opacity: 1;
-width: 100%;
-height: 40px;
+    background: var(--white) 0% 0% no-repeat padding-box;
+    border: 2px solid var(--gray-l2);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #B5B7BC;
+    border-radius: 8px;
+    opacity: 1;
+    width: 100%;
+    height: 40px;
 }
 
 .zipcode-input-textbox {
@@ -201,7 +203,7 @@ height: 40px;
     }
 
     .contact-information_grid-section {
-        
+
         display: grid;
         grid-template-columns: 2fr auto;
         gap: 1em;
@@ -228,14 +230,14 @@ height: 40px;
 
     select#state-name {
         /* UI Properties */
-background: var(--white) 0% 0% no-repeat padding-box;
-border: 2px solid var(--gray-l2);
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 2px solid #B5B7BC;
-border-radius: 8px;
-opacity: 1;
-width: 100%;
-height: 40px;
+        background: var(--white) 0% 0% no-repeat padding-box;
+        border: 2px solid var(--gray-l2);
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        opacity: 1;
+        width: 100%;
+        height: 40px;
     }
 
     .zipcode-input-textbox {
@@ -244,57 +246,62 @@ height: 40px;
         height: 26px;
     }
 
-    .contact-information_guest-checkout-section{
+    .contact-information_guest-checkout-section {
         border: 1px solid #ddd;
         padding: 3%;
     }
-    .select-country{
+
+    .select-country {
         background: var(--white) 0% 0% no-repeat padding-box;
-border: 2px solid var(--gray-l2);
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 2px solid #B5B7BC;
-border-radius: 8px;
-opacity: 1;
-width: 100%;
-height: 40px;
+        border: 2px solid var(--gray-l2);
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        opacity: 1;
+        width: 100%;
+        height: 40px;
     }
 
-    .contact-information_list{
+    .contact-information_list {
         text-align: left;
-    margin: 3% 0;
-    padding: 3% 3%;
-    border: 1px solid #ddd;
+        margin: 3% 0;
+        padding: 3% 3%;
+        border: 1px solid #ddd;
     }
 
-    .main-lable{
+    .main-lable {
         margin: 0 2% 0 0;
     }
-    .main-lable1{
+
+    .main-lable1 {
         margin: 0 0 0 2%;
     }
-    .contact-head-guest{
+
+    .contact-head-guest {
         grid-column: 1/-1;
         grid-row: 1/2;
     }
 
-    .contact-head-guest h1{
+    .contact-head-guest h1 {
         /* UI Properties */
-font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-172026);
-text-align: left;
-font: normal normal 600 24px/30px Source Serif Pro;
-letter-spacing: 0px;
-color: #172026;
-opacity: 1;
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-source-serif-pro);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-172026);
+        text-align: left;
+        font: normal normal 600 24px/30px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
     }
-    .header-main{
+
+    .header-main {
         margin: 2% 0;
     }
+
     .contact-information_divider {
         width: 10%;
     }
- 
+
 }
 
 .shipping-method-section {
@@ -323,7 +330,7 @@ opacity: 1;
     }
 }
 
-.placebtn{
+.placebtn {
     height: 45px;
     width: 250px;
     padding: 0 5%;
@@ -339,13 +346,20 @@ opacity: 1;
     cursor: pointer;
     margin-bottom: 50px;
 }
-.placebtn p{color: #333;}
-.main-contact-information_section{
+
+.placebtn p {
+    color: #333;
+}
+
+.main-contact-information_section {
     padding: 0 5%;
 }
-.placebtn p{color: #333;}
 
-.con-main-container{
+.placebtn p {
+    color: #333;
+}
+
+.con-main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;

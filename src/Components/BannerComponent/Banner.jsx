@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import './Banner.scss';
 import productbanner from '../../Assets/productbanner.jpg';
 
-class Banner extends React.Component{
-    render(){
-        return(
+class Banner extends React.Component {
+    render() {
+        return (
             <section className="wrapper">
                 <div className="banner-section">
                     <div className="banner-heading">

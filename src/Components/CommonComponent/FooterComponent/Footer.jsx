@@ -6,8 +6,6 @@ import facebook from "../../../Assets/facebook.png"
 import instagram from "../../../Assets/instagram.png"
 import twitter from "../../../Assets/twitter.png"
 
-
-
 class Footer extends React.Component {
     constructor() {
         super()

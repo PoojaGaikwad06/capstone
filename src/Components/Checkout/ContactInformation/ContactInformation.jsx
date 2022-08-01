@@ -9,7 +9,6 @@ import { useForm } from 'react-hook-form';
 import ShippingMethod from "../ShippingMethod/ShippingMethod";
 import PaymentInfo from "../PaymentInfo/PaymentInfo";
 import AddProduct from "../AddProduct/AddProduct";
-import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -19,12 +18,11 @@ const ContactInformation = () => {
     const shippingdata_store = useSelector((state) => state.shippingdata.shippingdata);
     const [placeorderflag, Set_placeorderflag] = useState({ ...shippingdata_store, ...shippingMethod_Store, ...paymentInfo_Store });
     useEffect(() => {
-        Set_placeorderflag(()=>{
+        Set_placeorderflag(() => {
             return {
                 ...shippingdata_store, ...shippingMethod_Store, ...paymentInfo_Store
             }
-              });
-        console.log(placeorderflag)
+        });
     }, [shippingdata_store, shippingMethod_Store, paymentInfo_Store])
 
     const toggle = () => {
@@ -36,7 +34,7 @@ const ContactInformation = () => {
 
             }
         }
-        
+
         return flag;
 
     }
@@ -299,7 +297,7 @@ const ContactInformation = () => {
                                 <button className="placebtn" disabled={toggle()} onClick={() => navigate('/order')}>place order</button>
                                 <p color="#333">By Clicking confirm order you agree to our <br />Terms and Conditions
                                 </p>
-                            </>: ""}
+                            </> : ""}
                     </div>
 
                     {pathname === "/checkout" ? <div className="contact-information_pricing-summary-column">

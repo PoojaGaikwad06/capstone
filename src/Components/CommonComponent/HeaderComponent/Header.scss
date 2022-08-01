@@ -8,6 +8,8 @@ $Header-Padding: 5% 5%;
 
 
 // Mobile View 
+
+@media screen and (min-width: 320px) and (max-width: 768px){
 .Mobile-Header-Section {
   background-color: $Header-Background-Color;
   padding: $Header-Padding;
@@ -32,15 +34,25 @@ $Header-Padding: 5% 5%;
     left: 0;
     padding: 20px;
     position: absolute;
-    top: 70px;
-    width: 100%;
+    top: 64px;
+    width: 94%;
     z-index: 2;
+    margin: 3%;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
   }
 
   .nav__link li {
     border-bottom: 1px solid #ede9e9;
     padding: 10px;
 
+  }
+  .shop-catagory{
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0;
+  }
+  .close-Btn-Mobile{
+    cursor: pointer;
   }
 
 }
@@ -61,9 +73,83 @@ header {
   width: 25px;
   text-align: center;
 }
+.Mob-Icon-Cart{
+  width: 15%;
+      text-align: end;
+  }
+  .Nav__Link li{
+    border-bottom: 1px solid #dfe1e2;
+    padding: 16px 0;
+  }
+  .Nav__Link{
+    padding: 0 3%;
+  }
+}
+
+//tablet View
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .Mobile-Header-Section {
+    display: none;
+  }
+  .Cart-Bag{
+    width: 11%;
+        text-align: end;
+    }
+  header {
+    align-items: center;
+    background-color: $Header-Background-Color;
+    color: $Header-Text-Color;
+    display: flex;
+    font-family: Mulish, sans-serif;
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 20px 6%;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    width: 20%;
+  }
+
+  .Venia-Logo {
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .Nav__Link {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+
+  }
+  .Navbar-Desktop{width: 80%;}
+
+  .Nav__Link li {
+    color: $Header-Text-Color;
+    font-weight: 400;
+    padding: 0 20px;
+
+  }
+  .cart-count{
+    position: relative;
+    right: 10px;
+    bottom: 15px;
+    background: #fda65d;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-grid;
+    width: 25px;
+    text-align: center;
+  }
+}
+
 
 //Desktop View
-@media screen and (min-width: 769px) and (max-width: 1920px) {
+@media screen and (min-width: 1201px) and (max-width: 1920px) {
   .Mobile-Header-Section {
     display: none;
   }
@@ -86,11 +172,17 @@ header {
   a {
     text-decoration: none;
     color: #fff;
+    width: 20%;
+  }
+  a:active {
+    text-decoration: underline;
+    color: #fff;
+    width: 20%;
   }
 
   .Venia-Logo {
     cursor: pointer;
-    width: 50%;
+    width: 100%;
   }
 
   .Nav__Link {
