@@ -13,7 +13,10 @@ import { Link } from "react-router-dom";
 import StarRatings from 'react-star-ratings';
 
 
+
 const ProductDetails = () => {
+    const [showMore, setshowMore] = useState(true);
+
     const [likeArray, updateLikeArray] = useState([]);
 
     const onClick = (id) => {
@@ -106,7 +109,15 @@ const ProductDetails = () => {
                             />({product.rating.count})
 
                         </div>
-                            <p>{product.description}</p>
+                        <p className="pro-desc">
+
+                            {showMore ? description.slice(0, 150) : description}
+                            &nbsp;
+                            <span className="colap-txt" onClick={() => setshowMore(!showMore)} >
+                                {showMore ? "Read more" : "Show less"}
+                            </span>
+                        </p>
+
                         <hr className="divider"></hr>
                         <p className="pd-heading">Quantity</p>
                         <div className="quantity">

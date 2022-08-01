@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./SideBar.scss";
 
-const Sidebar = (props) => {
 
+const Sidebar = (props) => {
     const [checkedState, setCheckedState] = useState(
         new Array(4).fill(false)
     );
@@ -17,20 +17,21 @@ const Sidebar = (props) => {
 
     };
     return (
-        <section className="main-sidebar">
-            <div className="sidebar-heading">
-                <p>Filters</p>
-                <hr className="divider"></hr>
-            </div>
-            <div className="size">
-                <p>Categories</p>
-                <label><input type="checkbox" checked={checkedState[0]} className="check-box" onChange={event => handleChange(0)} />Jewelery</label>
-                <label><input type="checkbox" checked={checkedState[1]} className="check-box" onChange={event => handleChange(1)} />Electronics</label>
-                <label><input type="checkbox" checked={checkedState[2]} className="check-box" onChange={event => handleChange(2)} />Men's Clothing</label>
-                <label><input type="checkbox" checked={checkedState[3]} className="check-box" onChange={event => handleChange(3)} />Women's Clothing</label>
-            </div>
-        </section>
-
+        <>
+            <section className="main-sidebar">
+                <div className="sidebar-heading">
+                    <p>Filters</p>
+                    <hr className="divider"></hr>
+                </div>
+                <div className="size">
+                    <p>Categories</p>
+                    <label><input type="checkbox" checked={checkedState[0]} className="check-box" onChange={event => handleChange(0)} />Jewelery</label>
+                    <label><input type="checkbox" checked={checkedState[1]} className="check-box" onChange={event => handleChange(1)} />Electronics</label>
+                    <label><input type="checkbox" checked={checkedState[2]} className="check-box" onChange={event => handleChange(2)} />Men's Clothing</label>
+                    <label><input type="checkbox" checked={checkedState[3]} className="check-box" onChange={event => handleChange(3)} />Women's Clothing</label>
+                </div>
+            </section>
+        </>
     );
 }
 
