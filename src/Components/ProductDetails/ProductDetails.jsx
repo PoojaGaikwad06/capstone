@@ -10,7 +10,6 @@ import share from "../../Assets/share.png";
 import { useNavigate } from "react-router-dom";
 import spinner from "../../Assets/spinner.gif";
 import { Link } from "react-router-dom";
-// import ReadMore from '../../Components/ReadMore/ReadMore';
 import StarRatings from 'react-star-ratings';
 
 
@@ -91,7 +90,7 @@ const ProductDetails = () => {
                     <div className="pdetail-info">
                         <div className="breadcurb">
                             <p className="breadcurb-info">
-                                <Link to={'/capstone'} ><span style={{ color: "#E26A2C" }}> Dashboard </span> </Link>/  <Link to={'/product'} ><span style={{ color: "#E26A2C" }}>Product List</span></Link> / Product Details
+                                <Link to={'/capstone'} ><span style={{ color: "#E26A2C" }}> Dashboard </span> </Link> / Product Details
                             </p>
                         </div>
                         <div><h1>{title}</h1></div>
@@ -107,9 +106,7 @@ const ProductDetails = () => {
                             />({product.rating.count})
 
                         </div>
-                        {/* <ReadMore> */}
                             <p>{product.description}</p>
-                        {/* </ReadMore> */}
                         <hr className="divider"></hr>
                         <p className="pd-heading">Quantity</p>
                         <div className="quantity">

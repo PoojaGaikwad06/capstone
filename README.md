@@ -45,13 +45,9 @@ Create below flow as per the design using React framework,\
 ## plugins
 
 - axios --version 0.27.2 
-
-- @reduxjs/toolkit --version 1.8.2
-
-- @mui/material --version 5.8.3 
-
 - sass --version 1.52.3 
-
+- react-simple-star-rating 4.0.5
+- react-hook-form 7.34.0
 
 ## Available Scripts
 
